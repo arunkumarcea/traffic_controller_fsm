@@ -1,0 +1,36 @@
+
+
+End Points:
+
+   Index   Instance          Pin   Type   Start Clock   End Clock   Clock Delay   Req Per    Slack
+   -----   --------          ---   ----   -----------   ---------   -----------   -------    -----
+       1   reg_prsnt_st[4]   D     reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.336
+       2   count[0]          D     reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.304
+       3   count[1]          D     reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.304
+       4   count[2]          D     reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.304
+       5   reg_prsnt_st[3]   D     reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.242
+       6   reg_prsnt_st[0]   CE    reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.125
+       7   reg_prsnt_st[2]   CE    reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.125
+       8   reg_prsnt_st[3]   CE    reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.125
+       9   reg_prsnt_st[1]   D     reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.088
+      10   reg_prsnt_st[0]   D     reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.036
+      11   reg_prsnt_st[2]   D     reg    tlc|clk:r     tlc|clk:r         4.138     1.688   -0.036
+      12   count[3]          D     reg    tlc|clk:r     tlc|clk:r         4.138     1.688    0.377
+
+
+Start Points:
+
+   Index   Instance          Pin   Type   Start Clock   Clock Delay    Slack
+   -----   --------          ---   ----   -----------   -----------    -----
+       1   reg_prsnt_st[0]   Q     reg    tlc|clk:r           4.138   -0.336
+       2   reg_prsnt_st[1]   Q     reg    tlc|clk:r           4.138   -0.304
+       3   reg_prsnt_st[1]   Q     reg    tlc|clk:r           4.138   -0.304
+       4   reg_prsnt_st[1]   Q     reg    tlc|clk:r           4.138   -0.304
+       5   reg_prsnt_st[2]   Q     reg    tlc|clk:r           4.138   -0.242
+       6   count[3]          Q     reg    tlc|clk:r           4.138   -0.125
+       7   count[3]          Q     reg    tlc|clk:r           4.138   -0.125
+       8   count[3]          Q     reg    tlc|clk:r           4.138   -0.125
+       9   count[0]          Q     reg    tlc|clk:r           4.138   -0.088
+      10   reg_prsnt_st[1]   Q     reg    tlc|clk:r           4.138   -0.036
+      11   reg_prsnt_st[1]   Q     reg    tlc|clk:r           4.138   -0.036
+      12   count[0]          Q     reg    tlc|clk:r           4.138    0.377

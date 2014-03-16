@@ -1,0 +1,1140 @@
+# 1.0 - Dump file for schematic support
+60 - Total Module
+# Module 1 RTL_ICGC
+0 0 - A I
+
+
+# End Module
+
+# Module 2 RTL_GSE
+0 0 - A I
+
+
+# End Module
+
+# Module 3 RTL_OAI
+0 0 - A I
+
+
+# End Module
+
+# Module 4 RTL_AOI
+0 0 - A I
+
+
+# End Module
+
+# Module 5 RTL_OA
+0 0 - A I
+
+
+# End Module
+
+# Module 6 RTL_AO
+0 0 - A I
+
+
+# End Module
+
+# Module 7 RTL_ADD_HALF
+0 0 - A I
+
+
+# End Module
+
+# Module 8 RTL_ADD_CSA
+0 0 - A I
+
+
+# End Module
+
+# Module 9 RTL_ADD_FULL
+0 0 - A I
+
+
+# End Module
+
+# Module 10 RTL_PRIM_MUX
+0 0 - A I
+
+
+# End Module
+
+# Module 11 RTL_MUX
+0 0 - A I
+
+
+# End Module
+
+# Module 12 M_RTL_PRIM_MUX
+0 0 - A I
+
+
+# End Module
+
+# Module 13 RTL_BUS_HOLDER
+0 0 - A I
+
+
+# End Module
+
+# Module 14 RTL_BUFIZ
+0 0 - A I
+
+
+# End Module
+
+# Module 15 RTL_BUFX
+0 0 - A I
+
+
+# End Module
+
+# Module 16 RTL_BUF
+0 0 - A I
+
+
+# End Module
+
+# Module 17 RTL_MUX4
+0 0 - A I
+
+
+# End Module
+
+# Module 18 RTL_MUX2
+0 0 - A I
+
+
+# End Module
+
+# Module 19 RTL_AND2
+0 0 - A I
+
+
+# End Module
+
+# Module 20 RTL_PRIM_CASE_NEQ
+0 0 - A I
+
+
+# End Module
+
+# Module 21 RTL_PRIM_CASE_EQ
+0 0 - A I
+
+
+# End Module
+
+# Module 22 RTL_PULLDOWN
+0 0 - A I
+
+
+# End Module
+
+# Module 23 RTL_PULLUP
+0 0 - A I
+
+
+# End Module
+
+# Module 24 RTL_BUFIX
+0 0 - A I
+
+
+# End Module
+
+# Module 25 RTL_NOR4
+0 0 - A I
+
+
+# End Module
+
+# Module 26 RTL_NOR3
+0 0 - A I
+
+
+# End Module
+
+# Module 27 RTL_NOR
+0 0 - A I
+
+
+# End Module
+
+# Module 28 RTL_FDPE
+0 0 - A I
+
+
+# End Module
+
+# Module 29 RTL_FDCE
+0 0 - A I
+
+
+# End Module
+
+# Module 30 RTL_FDE
+0 0 - A I
+
+
+# End Module
+
+# Module 31 RTL_FDCP
+0 0 - A I
+
+
+# End Module
+
+# Module 32 RTL_FDCPE
+0 0 - A I
+
+
+# End Module
+
+# Module 33 RTL_FDPCE
+0 0 - A I
+
+
+# End Module
+
+# Module 34 RTL_FDP
+0 0 - A I
+
+
+# End Module
+
+# Module 35 RTL_FDC
+0 0 - A I
+
+
+# End Module
+
+# Module 36 RTL_FDPC
+0 0 - A I
+
+
+# End Module
+
+# Module 37 RTL_FD
+0 0 - A I
+
+
+# End Module
+
+# Module 38 RTL_NAND4
+0 0 - A I
+
+
+# End Module
+
+# Module 39 RTL_NAND3
+0 0 - A I
+
+
+# End Module
+
+# Module 40 RTL_NAND
+0 0 - A I
+
+
+# End Module
+
+# Module 41 RTL_AND4
+0 0 - A I
+
+
+# End Module
+
+# Module 42 RTL_AND3
+0 0 - A I
+
+
+# End Module
+
+# Module 43 RTL_AND
+0 0 - A I
+
+
+# End Module
+
+# Module 44 RTL_OR4
+0 0 - A I
+
+
+# End Module
+
+# Module 45 RTL_OR3
+0 0 - A I
+
+
+# End Module
+
+# Module 46 RTL_OR
+0 0 - A I
+
+
+# End Module
+
+# Module 47 RTL_XNOR4
+0 0 - A I
+
+
+# End Module
+
+# Module 48 RTL_XNOR3
+0 0 - A I
+
+
+# End Module
+
+# Module 49 RTL_XNOR
+0 0 - A I
+
+
+# End Module
+
+# Module 50 RTL_XOR4
+0 0 - A I
+
+
+# End Module
+
+# Module 51 RTL_XOR3
+0 0 - A I
+
+
+# End Module
+
+# Module 52 RTL_XOR
+0 0 - A I
+
+
+# End Module
+
+# Module 53 RTL_NOT
+0 0 - A I
+
+
+# End Module
+
+# Module 54 RTL_LDPC
+0 0 - A I
+
+
+# End Module
+
+# Module 55 RTL_LD
+0 0 - A I
+
+
+# End Module
+
+# Module 56 M_RTL_AND_5
+0 0 - A I
+
+
+# End Module
+
+# Module 57 M_RTL_EQ_32
+0 0 - A I
+
+
+# End Module
+
+# Module 58 M_RTL_EQ_5
+0 0 - A I
+
+
+# End Module
+
+# Module 59 M_RTL_INCR_5
+0 0 - A I
+
+
+# End Module
+
+# Module 60 tlc
+19 605 - A I
+
+# SchmGroup 1
+always_/home/arkuma/probation/traffic_controller/tlc.v_43
+/home/arkuma/probation/traffic_controller/tlc.v
+43
+51
+1
+0
+
+# End SchmGroup 
+# SchmGroup 2
+always_/home/arkuma/probation/traffic_controller/tlc.v_56
+/home/arkuma/probation/traffic_controller/tlc.v
+56
+62
+1
+0
+
+# End SchmGroup 
+# SchmGroup 3
+always_/home/arkuma/probation/traffic_controller/tlc.v_68
+/home/arkuma/probation/traffic_controller/tlc.v
+68
+271
+1
+0
+
+# End SchmGroup 
+# SchmGroup 4
+always_/home/arkuma/probation/traffic_controller/tlc.v_280
+/home/arkuma/probation/traffic_controller/tlc.v
+280
+398
+1
+0
+
+# End SchmGroup 
+# SchmGroup 5
+G_RTL_1
+/home/arkuma/probation/traffic_controller/tlc.v
+38
+38
+3
+0
+
+# End SchmGroup 
+# SchmGroup 6
+G_RTL_2
+/home/arkuma/probation/traffic_controller/tlc.v
+40
+40
+3
+0
+
+# End SchmGroup 
+# SchmGroup 7
+G_RTL_3
+/home/arkuma/probation/traffic_controller/tlc.v
+39
+39
+3
+0
+
+# End SchmGroup 
+# SchmGroup 8
+G_RTL_4
+/home/arkuma/probation/traffic_controller/tlc.v
+41
+41
+3
+0
+
+# End SchmGroup 
+# SchmGroup 9
+G_RTL_5
+/home/arkuma/probation/traffic_controller/tlc.v
+267
+267
+3
+3
+
+# End SchmGroup 
+# SchmGroup 10
+G_RTL_6
+/home/arkuma/probation/traffic_controller/tlc.v
+61
+61
+3
+2
+
+# End SchmGroup 
+# SchmGroup 11
+G_RTL_7
+/home/arkuma/probation/traffic_controller/tlc.v
+61
+61
+3
+2
+
+# End SchmGroup 
+# SchmGroup 12
+G_RTL_8
+/home/arkuma/probation/traffic_controller/tlc.v
+50
+50
+3
+1
+
+# End SchmGroup 
+# SchmGroup 13
+G_RTL_9
+/home/arkuma/probation/traffic_controller/tlc.v
+392
+392
+3
+4
+
+# End SchmGroup 
+# SchmGroup 14
+G_RTL_10
+/home/arkuma/probation/traffic_controller/tlc.v
+393
+393
+3
+4
+
+# End SchmGroup 
+# SchmGroup 15
+G_RTL_11
+/home/arkuma/probation/traffic_controller/tlc.v
+393
+393
+3
+4
+
+# End SchmGroup 
+# SchmGroup 16
+G_RTL_12
+/home/arkuma/probation/traffic_controller/tlc.v
+393
+393
+3
+4
+
+# End SchmGroup 
+# SchmGroup 17
+G_RTL_13
+/home/arkuma/probation/traffic_controller/tlc.v
+393
+393
+3
+4
+
+# End SchmGroup 
+# SchmGroup 18
+G_RTL_14
+/home/arkuma/probation/traffic_controller/tlc.v
+394
+394
+3
+4
+
+# End SchmGroup 
+# SchmGroup 19
+G_RTL_15
+/home/arkuma/probation/traffic_controller/tlc.v
+50
+50
+3
+1
+
+# End SchmGroup 
+# IndexInfo
+1
+19
+19
+19
+1
+19
+1
+1
+1
+1
+10
+10
+10
+10
+10
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+9
+9
+9
+3
+9
+3
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+13
+13
+13
+13
+13
+13
+13
+13
+13
+13
+13
+13
+13
+13
+13
+13
+4
+14
+14
+14
+4
+15
+15
+15
+4
+16
+16
+16
+4
+17
+17
+17
+18
+18
+18
+18
+18
+18
+18
+18
+18
+18
+18
+18
+18
+18
+18
+4
+18
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+7
+7
+7
+7
+7
+7
+7
+7
+7
+7
+7
+7
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+12
+12
+12
+12
+11
+11
+11
+11
+11
+# End IndexInfo
+
+# End Module
+

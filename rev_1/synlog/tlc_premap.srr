@@ -1,0 +1,51 @@
+Synopsys Xilinx Technology Pre-mapping, Version maprc, Build 1224R, Built Aug 30 2012 21:18:57
+Copyright (C) 1994-2012, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version G-2012.09
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+Reading constraint file: /home/arkuma/probation/traffic_controller/rev_1/tlc_fsm.sdc
+@N|Using encoding styles selected by FSM Explorer.
+Data created on Thu Oct 24 10:37:18 2013
+@L: /home/arkuma/probation/traffic_controller/rev_1/tlc_scck.rpt 
+Printing clock  summary report in "/home/arkuma/probation/traffic_controller/rev_1/tlc_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+Adding property syn_encoding, value "sequential", to instance reg_prsnt_st[17:0]
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 95MB)
+
+Reading Xilinx I/O pad type table from file </tools/synp-2012.09/lib/xilinx/x_io_tbl.txt> 
+Reading Xilinx Rocket I/O parameter type table from file </tools/synp-2012.09/lib/xilinx/gttype.txt> 
+
+
+Clock Summary
+**************
+
+Start       Requested     Requested     Clock        Clock                
+Clock       Frequency     Period        Type         Group                
+--------------------------------------------------------------------------
+tlc|clk     642.3 MHz     1.557         inferred     Autoconstr_clkgroup_0
+==========================================================================
+
+@W: MT529 :"/home/arkuma/probation/traffic_controller/tlc.v":56:0:56:5|Found inferred clock tlc|clk which controls 22 sequential elements including reg_prsnt_st[17:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+syn_allowed_resources : blockrams=52  set on top level netlist tlc
+@N: BN225 |Writing default property annotation file /home/arkuma/probation/traffic_controller/rev_1/tlc.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 170MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Oct 24 10:37:19 2013
+
+###########################################################]

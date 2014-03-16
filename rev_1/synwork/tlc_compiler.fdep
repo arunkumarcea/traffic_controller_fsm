@@ -1,0 +1,18 @@
+#OPTIONS:"|-prodtype|synplify_pro|-dspmac|-pqdpadd|-primux|-fixsmult|-sdff_counter|-infer_seqShift|-verification_mode|0|-nram|-divnmod|-loadunimacro|-I|/home/arkuma/probation/traffic_controller/|-I|/tools/synp-2012.09/lib|-v2001|-devicelib|/tools/synp-2012.09/lib/xilinx/unisim_m10i.v|-devicelib|/tools/synp-2012.09/lib/xilinx/unisim.v|-encrypt|-pro|-ll|2000|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work"
+#CUR:"/tools/synp-2012.09/linux_a_64/c_ver":1346276275
+#CUR:"/tools/synp-2012.09/lib/xilinx/unisim_m10i.v":1346276207
+#CUR:"/tools/synp-2012.09/lib/xilinx/unisim.v":1346276207
+#CUR:"/tools/synp-2012.09/lib/vlog/umr_capim.v":1346276257
+#CUR:"/tools/synp-2012.09/lib/vlog/scemi_objects.v":1346276257
+#CUR:"/tools/synp-2012.09/lib/vlog/scemi_pipes.svh":1346276257
+#CUR:"/tools/synp-2012.09/lib/vlog/hypermods.v":1346276257
+#CUR:"/home/arkuma/probation/traffic_controller/tlc.v":1382420901
+#numinternalfiles:6
+#defaultlanguage:verilog
+0			"/home/arkuma/probation/traffic_controller/tlc.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+#Dependency Lists(Users Of)
+0 -1
+#Design Unit to File Association
+module work tlc 0

@@ -1,0 +1,10 @@
+//SpyGlass: 4.3.5
+-templatedir $SPYGLASS_HOME/GuideWare/New_RTL // spg_backref : $SPYGLASS_HOME/.spyglass.setup 21
+-verilog // spg_backref : N.A. 0
+-policies=spyglass  // spg_backref : N.A 0
+-rules ZeroSizeFile  // spg_backref : N.A. 0
+-lib SYNOPSYS /tools/spyg-4.3.5/SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS  // spg_backref : $SPYGLASS_HOME/.spyglass.setup 25
+-report moresimple  // spg_backref : $SPYGLASS_HOME/.spyglass.setup 17
+-inferblackbox  // spg_backref : $SPYGLASS_HOME/.spyglass.setup 29
+--strict_sgdc_check  // spg_backref : $SPYGLASS_HOME/.spyglass.setup 37
+-vdbfile spyglass.vdb  // spg_backref : N.A. 0

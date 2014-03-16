@@ -1,0 +1,499 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// Module: Signoff-verilog.spq
+//         $Id: Signoff-verilog.spq.rca 1.1 Mon Mar  7 14:16:42 2011 sakulkar Experimental sakulkar $
+//
+// Owner:  Mike Bratvold
+//         LSI Fort Collins
+//
+// GENERAL DESCRIPTION: 
+//   Atrenta Spyglass 3.9.x rules used for Silverton IDU development.
+//   The DTI has additional rules which must be checked in Spyglass.
+//   This is a version of the rules that were used in version 3.7.3 
+//   on the Ouray4 project.
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+//  This media contains an authorized copy or copies of material
+//  copyrighted by LSI Corporation.  This copyright notice and any
+//  other copyright notices included in machine readable copies must
+//  be reproduced on all authorized copies.  This is confidential and
+//  unpublished property of LSI Corporation.
+//
+//  Copyright (C) LSI Corporation, 2008.
+//  All rights reserved.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// Signoff
+-verilog
+-policies=openmore,lint,miscellaneous,starc,morelint,erc
+// -report signoff
+-overloadrules=ArrayIndex+severity=Warning
+-overloadrules=BitOrder-ML+severity=Error
+-overloadrules=CaseOverIf+severity=Warning
+-overloadrules=ChkSensExprPar-ML+severity=Warning
+-overloadrules=ClockDomain+severity=Warning
+-overloadrules=ClockPhase+severity=Warning
+-overloadrules=CombLoop+severity=Error
+-overloadrules=ConsCase+severity=Warning
+-overloadrules=ConstSig+severity=Warning
+-overloadrules=DeadCode+severity=Warning
+-overloadrules=DefaultState+severity=Error
+-overloadrules=DisallowCaseX-ML+severity=Warning
+-overloadrules=DisallowCaseZ-ML+severity=Warning
+-overloadrules=DisallowTimeArr-ML+severity=Error
+-overloadrules=FuncName+severity=Warning
+-overloadrules=FunctionComment+severity=Warning
+-overloadrules=GatedClock+severity=Warning
+-overloadrules=GroupOFAsgn-ML+severity=Error
+-overloadrules=UnloadedNet-ML+severity=Warning
+-overloadrules=MemConflict-ML+severity=Info
+-overloadrules=Mux01+severity=Warning
+-overloadrules=NamedAssoc+severity=Warning
+-overloadrules=NoAssignX-ML+severity=Warning
+# replacing NoDupPort with WRN_48
+#-overloadrules=NoDupPort-ML+severity=Error
+-overloadrules=NoExprInPort-ML+severity=Warning
+-overloadrules=NoFeedThrus-ML+severity=Warning
+-overloadrules=NoGates+severity=Error
+-overloadrules=NoRealFunc-ML+severity=Error
+-overloadrules=NoScripts+severity=Error
+-overloadrules=NoWidthInBasedNum-ML+severity=Warning
+-overloadrules=NonStaticMacro-ML+severity=Warning
+-overloadrules=NullPort-ML+severity=Error
+-overloadrules=ParamOverrideMismatch-ML+severity=Warning
+-overloadrules=ReEntrantOutput-ML+severity=Warning
+-overloadrules=RedundantLogicalOp-ML+severity=Warning
+
+// RTL design rule: flops in the control path will have async sets/clears.
+// This is needed to prevent X propagation during gate sims.  The async
+// sets/clears can be omitted for data path flops if the RTL designer thinks
+// that this will not cause problems for gate sims.
+// Mike Bratvold/Jack Ellis, April 2008
+-overloadrules=ResetFlop-ML+severity=Warning
+
+// MAB No reason for this rule that we can think of.
+// In the silverton BC, this rule is causing 15,000 second run times.
+// This rule say that a wire can't be passed down through more than 3 modules.
+//-overloadrules=STARC-1.6.3.2+severity=Error
+
+-overloadrules=STARC-1.6.6.2+severity=Error
+-overloadrules=STARC-2.1.3.1+severity=Error
+-overloadrules=STARC-2.1.3.2+severity=Error
+-overloadrules=STARC-2.8.1.5+severity=Warning
+-overloadrules=STARC-2.8.3.5+severity=Warning
+-overloadrules=STARC-2.8.4.3+severity=Error
+-overloadrules=STARC-2.8.5.2+severity=Warning
+-overloadrules=STARC-3.1.2.7+severity=Error
+-overloadrules=SensListRepeat-ML+severity=Warning
+-overloadrules=TaskComment+severity=Warning
+-overloadrules=TriStateName+severity=Warning
+-overloadrules=TristateSig-ML+severity=Warning
+-overloadrules=VarName+severity=Warning
+-overloadrules=W107+severity=Warning
+-overloadrules=W110+severity=Error
+-overloadrules=W112+severity=Error
+-overloadrules=W116+severity=Error
+-overloadrules=W120+severity=Warning
+-overloadrules=W121+severity=Error
+-overloadrules=W122+severity=Error
+//-overloadrules=W123+severity=Error
+-overloadrules=W126+severity=Warning
+-overloadrules=W127+severity=Error
+-overloadrules=W128+severity=Error
+-overloadrules=W129+severity=Error
+-overloadrules=W146+severity=Warning
+-overloadrules=W154+severity=Warning
+-overloadrules=W156+severity=Error
+-overloadrules=W159+severity=Warning
+-overloadrules=W163+severity=Error
+-overloadrules=W164a+severity=Warning
+-overloadrules=W164c+severity=Warning
+-overloadrules=W167+severity=Warning
+-overloadrules=W17+severity=Warning
+-overloadrules=W175+severity=Warning
+-overloadrules=W18+severity=Warning
+-overloadrules=W182a+severity=Error
+-overloadrules=STARC-2.3.1.2c+severity=Error
+-overloadrules=W182c+severity=Error
+#obsolete#-overloadrules=W182f+severity=Error
+-overloadrules=W182g+severity=Error
+-overloadrules=W182h+severity=Error
+#obsolete#-overloadrules=W182i+severity=Error
+#obsolete#-overloadrules=W182j+severity=Error
+-overloadrules=W182k+severity=Error
+-overloadrules=W182n+severity=Error
+-overloadrules=W187+severity=Warning
+-overloadrules=W188+severity=Error
+-overloadrules=W189+severity=Warning
+-overloadrules=W190+severity=Warning
+-overloadrules=W191+severity=Warning
+-overloadrules=W20+severity=Error
+-overloadrules=W208+severity=Warning
+-overloadrules=W21+severity=Error
+-overloadrules=W210+severity=Error
+-overloadrules=W213+severity=Error
+-overloadrules=W215+severity=Error
+-overloadrules=W216+severity=Error
+-overloadrules=W218+severity=Error
+-overloadrules=W224+severity=Warning
+-overloadrules=W226+severity=Warning
+-overloadrules=W238+severity=Error
+-overloadrules=W239+severity=Warning
+-overloadrules=W240+severity=Warning
+-overloadrules=W241+severity=Error
+//-overloadrules=W242+severity=Fatal
+-overloadrules=W243+severity=Error
+#obsolete#-overloadrules=W244+severity=Error
+-overloadrules=W245+severity=Error
+-overloadrules=W250+severity=Error
+-overloadrules=W253+severity=Warning
+-overloadrules=W254+severity=Warning
+-overloadrules=W256+severity=Warning
+-overloadrules=W263+severity=Error
+-overloadrules=W287a+severity=Error
+-overloadrules=W287c+severity=Error
+-overloadrules=W289+severity=Error
+-overloadrules=W293+severity=Error
+-overloadrules=W294+severity=Error
+-overloadrules=W295+severity=Error
+-overloadrules=W308+severity=Warning
+-overloadrules=W310+severity=Warning
+-overloadrules=W311+severity=Warning
+-overloadrules=W312+severity=Warning
+-overloadrules=W313+severity=Warning
+-overloadrules=W314+severity=Warning
+-overloadrules=W317+severity=Error
+-overloadrules=W323+severity=Warning
+-overloadrules=W326+severity=Fatal
+-overloadrules=W333+severity=Warning
+-overloadrules=W336+severity=Error
+-overloadrules=W337+severity=Error
+-overloadrules=W339a+severity=Warning
+-overloadrules=W339b+severity=Error
+-overloadrules=W34+severity=Warning
+-overloadrules=W345+severity=Error
+-overloadrules=W346+severity=Error
+-overloadrules=W348+severity=Error
+-overloadrules=W350+severity=Warning
+-overloadrules=W351+severity=Error
+-overloadrules=W352+severity=Error
+-overloadrules=W362+severity=Warning
+-overloadrules=W391+severity=Warning
+-overloadrules=W392+severity=Warning
+-overloadrules=W398+severity=Error
+-overloadrules=W402a+severity=Warning
+-overloadrules=W402b+severity=Warning
+-overloadrules=W414+severity=Error
+-overloadrules=W415+severity=Error
+-overloadrules=W415a+severity=Warning
+-overloadrules=W421+severity=Warning
+-overloadrules=W422+severity=Error
+-overloadrules=W423+severity=Warning
+-overloadrules=W424+severity=Warning
+-overloadrules=W425+severity=Warning
+-overloadrules=W426+severity=Warning
+-overloadrules=W427+severity=Warning
+-overloadrules=W428+severity=Warning
+-overloadrules=W429+severity=Error
+//-overloadrules=W43+severity=Error
+-overloadrules=W430+severity=Warning
+-overloadrules=W433+severity=Warning
+//-overloadrules=W434+severity=Error
+-overloadrules=W442a+severity=Error
+-overloadrules=W442b+severity=Error
+-overloadrules=W442c+severity=Error
+#obsolete, use W442c#-overloadrules=W442d+severity=Error
+#obsolete#-overloadrules=W442e+severity=Error
+-overloadrules=W442f+severity=Error
+#obsolete#-overloadrules=W449+severity=Error
+#obsolete, use W218#-overloadrules=W450+severity=Error
+-overloadrules=W456a+severity=Warning
+-overloadrules=W467+severity=Error
+-overloadrules=W468+severity=Warning
+-overloadrules=W474+severity=Warning
+-overloadrules=W475+severity=Warning
+-overloadrules=W476+severity=Warning
+-overloadrules=W477+severity=Warning
+-overloadrules=W478+severity=Error
+-overloadrules=W479+severity=Error
+-overloadrules=W480+severity=Warning
+-overloadrules=W481a+severity=Error
+-overloadrules=W481b+severity=Error
+-overloadrules=nonstaticloop+severity=Error
+-overloadrules=W484+severity=Warning
+-overloadrules=W486+severity=Warning
+-overloadrules=W489+severity=Error
+-overloadrules=W490+severity=Error
+-overloadrules=W491+severity=Warning
+-overloadrules=W494+severity=Warning
+-overloadrules=W495+severity=Warning
+-overloadrules=W496a+severity=Error
+-overloadrules=W496b+severity=Error
+-overloadrules=W497+severity=Warning
+-overloadrules=W499+severity=Error
+-overloadrules=W502+severity=Error
+-overloadrules=W503+severity=Warning
+-overloadrules=W504+severity=Warning
+-overloadrules=W505+severity=Error
+#obsolete#-overloadrules=W510+severity=Warning
+-overloadrules=W526+severity=Warning
+-overloadrules=W527+severity=Warning
+-overloadrules=W528+severity=Warning
+-overloadrules=W541+severity=Warning
+-overloadrules=W546+severity=Fatal
+-overloadrules=W551+severity=Warning
+-overloadrules=W552+severity=Warning
+-overloadrules=W553+severity=Warning
+-overloadrules=W557b+severity=Error
+-overloadrules=W558+severity=Error
+-overloadrules=W561+severity=Warning
+-overloadrules=W563+severity=Warning
+-overloadrules=W575+severity=Warning
+-overloadrules=W576+severity=Warning
+#obsolete#-overloadrules=W601+severity=Error
+-overloadrules=W66+severity=Error
+-overloadrules=W701+severity=Warning
+-overloadrules=badimplicitSM1+severity=Error
+-overloadrules=badimplicitSM2+severity=Error
+-overloadrules=badimplicitSM4+severity=Error
+-overloadrules=bothedges+severity=Error
+-overloadrules=infiniteloop+severity=Error
+-overloadrules=mixedsenselist+severity=Error
+-overloadrules=nonstaticloop+severity=Error
+#obsolete#-overloadrules=readclock+severity=Error
+-overloadrules=repeatevent+severity=Error
+#obsolete#-overloadrules=taskloop+severity=Error
+-rules ArrayIndex	// Bus signals are declared with low-order bit first
+-rules BitOrder-ML	// Bit order specification should follow recommended convention.
+-rules CaseOverIf	// Use case statements instead of if/else, where feasible, if performance is important
+-rules ChkSensExprPar-ML	// Expression uses parenthesis '()' in the sensitivity list
+-rules ClockDomain	// More than one clock domain in a module
+-rules ClockPhase	// Both positive and negative edges of a clock are used in this design
+-rules CombLoop	// Combinational loop exists
+-rules ConsCase	// Name not used consistently with same case
+-rules ConstSig	// Signal has a constant value or can only switch to a constant value
+-rules DeadCode	// Code does not contribute to functionality of the design
+-rules DefaultState	// State-machine does not have a defined default state
+-rules DisallowCaseX-ML	// Design should not use casex constructs
+-rules DisallowCaseZ-ML	// Design should not use casez constructs
+-rules DisallowTimeArr-ML	// Array of time is not allowed
+-rules FuncName	// Function/procedure does not follow recommended naming convention
+-rules FunctionComment	// Function is not commented
+-rules GatedClock	// Gated/generated clocks are generated from more than one block in the design
+-rules GroupOFAsgn-ML	// Verilog treats differently with C-like group of assignment
+-rules UnloadedNet-ML	// Unconnected and undriven nets must be removed from the design
+-rules MemConflict-ML	// Possible memory conflict(overwrite) detected
+-rules Mux01    // Connected muxes should not have a common select.^M
+-rules NamedAssoc	// Use named-association rather than positional association to connect to an instance
+-rules NoAssignX-ML	// RHS of the assignment contains 'X'
+# replacing NoDupPort with WRN_48
+#-rules NoDupPort-ML	// Port names should not be duplicated
+-rules WRN_48 // Port names should not be duplicated
+-rules NoExprInPort-ML	// Port connections in instances should not contain expressions
+-rules NoFeedThrus-ML	// Block should not contain feed-throughs
+-rules NoGates	// Directly instantiated gate detected
+-rules NoRealFunc-ML	// Functions of type real are not synthesizable
+-rules NoScripts	// Synthesis script detected
+-rules NoWidthInBasedNum-ML	// Width should be specified for all based numbers
+-rules NonStaticMacro-ML	// Macro evaluates to non-static value
+-rules NullPort-ML	// Null Ports should not be defined
+-rules ParamOverrideMismatch-ML	// Mismatch in the number of parameter over-rides and number of parameters in theinstantiated module
+-rules ReEntrantOutput-ML	// The re-entrant outputs should be avoided
+-rules RedundantLogicalOp-ML	// Logical operation result is same as one of the operands or is a constant
+-rules ResetFlop-ML	// All the flip-flops should have either asynchronous set/reset or synchronousset/reset
+-rules STARC-1.6.3.2	// Keep timing paths within three sub-blocks inside each basic block
+-rules STARC-1.6.6.2	// Do not use set_dont_touch directive directly on cells.
+-rules STARC-2.1.3.1	// Bit-width of function arguments must match bit-width of the corresponding function inputs.
+-rules STARC-2.1.3.2	// Bit-width of function return value must match the bit-width of assignment destination signal.
+-rules STARC-2.8.1.5	// Do not use the full_case directive.
+-rules STARC-2.8.3.5	// default clause in case constructs must be the last clause.
+-rules STARC-2.8.4.3	// Design should not use casex or casez constructs.
+-rules STARC-2.8.5.2	// Do not use the parallel_case directive.
+-rules STARC-3.1.2.7	// Do not use embedded dc_shell scripts in the design
+-rules SensListRepeat-ML	// A signal is repeated multiple times in the sensitivity list
+-rules TaskComment	// A comment does not appear immediately before a task definition
+-rules TriStateName	// Tristate signal does not follow naming convention
+-rules TristateSig-ML	// Tristate signal detected
+-rules VarName	// Variable does not follow recommended naming convention
+-rules W107	// Do not make bus connections to primitive gates (and, or, xor, nand, nor, xnor)
+-rules W110	// An instance port connection has incompatible width compared to the port definition
+-rules W112	// Nested event controls may not be synthesizable
+-rules W116	// Unequal length operands in bitwise logical/arithmetic/relational operator
+-rules W120	// A signal/variable has been declared but is not used
+-rules W121	// A variable names collides with and may shadow another variable
+-rules W122	// A signal is read inside a combinational process/always block but is not included in the sensitivity list
+//-rules W123	// A signal or variable has been read but is not set
+-rules W126	// Do not use non-integer delays
+-rules W127	// Delay values should not contain X(unknown value) or Z(high-impedance state)
+-rules W128	// Avoid using negative delays
+-rules W129	// Variable delay values should be avoided
+-rules W146	// Use named-association rather than positional association to connect to aninstance
+-rules W154	// Do not declare nets implicitly
+-rules W156	// Do not connect busses in reverse order
+-rules W159	// Condition contains a constant expression
+-rules W163	// Truncation of bits in constant integer conversion
+-rules W164a	// LHS width is less than RHS width of assignment (Truncation)
+-rules W164c	// LHS width is less than RHS width of assignment
+-rules W167	// Module has no input or output ports
+-rules W17	// Prefer full range of a bus/array in sensitivity list. Avoid bits or slices
+-rules W175	// A parameter/generic has been defined but is not used
+-rules W18	// Do not infer latches
+-rules W182a	// Statement is not synthesizable
+-rules STARC-2.3.1.2c	// Primitive declarations (UDPs) may not be synthesizable
+-rules W182c	// time declarations are not synthesizable
+#obsolete#-rules W182f	// Array of integer variables may not be synthesizable
+-rules W182g	// tri0 declarations may not be synthesizable
+-rules W182h	// tri1 declarations are not synthesizable
+#obsolete#-rules W182i	// triand declarations may not be synthesizable
+#obsolete#-rules W182j	// trior declarations may not be synthesizable
+-rules W182k	// trireg declarations are not synthesizable
+-rules W182n	// Switches such as cmos, pmos & nmos are not synthesizable
+-rules W187	// The 'default' or 'others' clause should be the last clause in a case statement
+-rules W188	// Do not write to input ports
+-rules W189	// Nested Synopsys translate_off comments
+-rules W190	// Task or procedure declared but not used
+-rules W191	// Function declared but not used
+-rules W20	// Quasi-continuous assignments are not synthesizable
+-rules W208	// Nested Synopsys translate_on comments
+-rules W21	// Deassign statements are not synthesizable
+-rules W210	// Number of connections made to an instance does not match number of ports on master
+-rules W213	// PLI Task/Functions are not synthesizable
+-rules W215	// Inappropriate bit select for integer or time variable
+-rules W216	// Inappropriate range select for integer or time variable
+-rules W218	// Questionable event expression
+-rules W224	// Multi-bit expression found when one-bit expression expected
+-rules W226	// Case select expression is constant
+-rules W238	// Mixing combinational and sequential styles
+-rules W239	// Hierarchical references may not be synthesizable
+-rules W240	// An input has been declared but is not read
+-rules W241	// Output is never set
+#-rules W242	// A function is calling itself; i.e. it is recursive
+-rules W243	// Recursive task enable
+#obsolete#-rules W244	// Shift by non-constant may be unsynthesizable
+-rules W245	// Probably intended "or", not "|" or "||" in sensitivity list
+//-rules W250	// The disable statement may not be synthesizable
+-rules W253	// Data event has an edge
+-rules W254	// Reference event does not have an edge
+-rules W256	// A notifier must be a one-bit register
+-rules W263	// A case expression width does not match case select expression width
+-rules W287a	// Some inputs to instance are not driven or unconnected
+-rules W287c	// Inout port of an instance is not connected
+-rules W289	// A real operand is being used in a logical comparison
+-rules W293	// A function(or procedure) returns a real value, which is unsynthesizable
+-rules W294	// Real variables are unsynthesizable
+-rules W295	// Event variables may not be synthesizable
+-rules W308	// Converting real to integer
+-rules W310	// Converting integer to unsigned (reg type)
+-rules W311	// Converting real to unsigned (reg type)
+-rules W312	// Converting real to single bit
+-rules W313	// Converting integer to single bit
+-rules W314	// Converting multi-bit reg type to single bit
+-rules W317	// Assignment to a supply net
+-rules W323	// Multiply driven inout net
+-rules W326	// Event variable appearing in a posedge/negedge expression
+-rules W333	// Unused UDP
+-rules W336	// Use of blocking assignment in a sequential block
+-rules W337	// Illegal value (e.g. real) being used or X, Z or ? being used inappropriately asa case item
+-rules W339a	// Case equal operator (===) and case not equal (!==) operators may not be synthesizable
+-rules W339b	// The divisor (second operand) for '/' and '%' should be a power of two
+-rules W34	// Macro defined but never used
+-rules W345	// Presence of an event control in a task or procedure body may not be synthesizable
+-rules W346	// Task may be unsynthesizable because it contains multiple event constrols
+-rules W348	// Unspecified width for integer expression in a concatenation
+-rules W350	// A control character appears inside a string
+-rules W351	// A control character appears inside a comment
+-rules W352	// The condition inside a "for" statement is constant
+-rules W362	// Unequal length in arithmetic comparison operator
+-rules W391	// Design has a clock driving it on both edges
+-rules W392	// Do not use a reset with both positive and negative polarity within the samedesign unit
+-rules W398	// A case choice is covered more than once in a case statement
+-rules W402a	// Synchronous reset signal is not an input to the module
+-rules W402b	// Asynchronous reset signal is not an input to the module
+-rules W414	// Use of non-blocking assignment in a combinational block
+-rules W415	// Net which is not tristated has multiple simultaneous drivers
+-rules W415a	// Signal may be multiply assigned (beside initialization) in the same scope.
+-rules W421	// Always block/process does not have event control
+-rules W422	// Unsynthesizable block/process: event control has more than one clock
+-rules W423	// A port with a range is redeclared with a different range
+-rules W424	// Function or subprogram sets a global signal/variable
+-rules W425	// Function or sub-program uses a global signal/variable
+-rules W426	// Task sets a global variable
+-rules W427	// Task uses a global variable
+-rules W428	// Task called in a combinational block
+-rules W429	// Task called in a sequential block
+//-rules W43	// Wait statements may not be synthesizable
+-rules W430	// The "initial" statement is not synthesizable
+-rules W433	// More than one top-level design unit
+//-rules W434	// Top-level module is a UDP
+-rules W442a	// Reset sequence may not be synthesizable. First statement in block mustbe an if statement
+-rules W442b	// Reset sequence may not be synthesizable. The reset condition is too complex
+-rules W442c	// Reset sequence may not be synthesizable. Reset can only be modified by! or ~ in the if condition
+#obsolete, use W442c#-rules W442d	// Reset sequence may not be synthesizable. Condition should use simple identifier or its negation
+#obsolete#-rules W442e	// The specified reset sequence may not be synthesizable. Trigger and test are inconsistent
+-rules W442f	// The specified reset sequence may not be synthesizable. Only binary operator that canbe used in 'if' is ==
+#obsolete#-rules W449	// An expression used as a clock may not be synthesizable
+#obsolete, use W218#-rules W450	// A multi-bit expression used as a clock may not be synthesizable
+-rules W456a	// A signal is included in the sensitivity list of a combinational always/process block but none of its bits is read in that block
+-rules W467	// Use of don't-care except in case labels may lead to simulation/synthesis mismatch
+-rules W468	// Index variable is too short
+-rules W474	// Variable assigned but not deassigned
+-rules W475	// Variable deassigned but not assigned
+-rules W476	// Variable forced but not released
+-rules W477	// Variable released but not forced
+-rules W478	// Bad loop initialization statement
+-rules W479	// Loop step statement is incorrect
+-rules W480	// Loop index is not an integer
+-rules W481a	// Unsynthesizable loop: step variable differs from variable used in condition
+-rules W481b	// Unsynthesizable loop: step variable differs from variable used in initialization
+-rules nonstaticloop	// Unsynthesizable for-loop - condition variable differs from initialization variable
+-rules W484	// Possible loss of carry or borrow due to addition/subtraction
+-rules W486	// Shift overflow - some bits may be lost
+-rules W489	// The last statement in a function does not assign to the function
+-rules W490	// A control expression/sub-expression is a constant
+-rules W491	// Constant will be ?-extended
+-rules W494	// Inout port is not used
+-rules W495	// Inout port is never set
+-rules W496a	// Comparison to a tristate in a condition expression is treated as false in synthesis.
+-rules W496b	// Comparison to a tristate in a case statement is treated as false in synthesis.
+-rules W497	// Not all bits of a bus are set
+-rules W499	// Not all bits of a function are set in the function
+-rules W502	// A variable in sensitivity list is modified inside the block
+-rules W503	// An event variable is never triggered
+-rules W504	// Integer is used in port expression
+-rules W505	// Value assigned inconsistently - may not be synthesizable
+#obsolete#-rules W510	// Defparam statements may not be synthesizable
+-rules W526	// Use case statements rather than if/else, where feasible, if performance is important
+-rules W527	// Dangling else in sequence of if conditions. Make sure nesting is correct
+-rules W528	// A signal or variable is set but never read
+-rules W541	// A tri-state is inferred
+-rules W546	// Duplicate design unit
+-rules W551	// A case statement marked full_case has a default clause.
+-rules W552	// Different bits of a bus are driven in different sequential blocks
+-rules W553	// Different bits of a bus are driven in different combinational blocks
+-rules W557b	// Incorrect use of part select for a parameter
+-rules W558	// Incorrect use of bit select for a parameter
+-rules W561	// A zero-width-based number may be evaluated as 32 bit number
+-rules W563	// Reduction of a single-bit expression is redundant
+-rules W575	// Logical NOT operating on a vector
+-rules W576	// Logical operation on a vector
+#obsolete#-rules W601	// Loop index modification inside loop is not synthesizable
+-rules W66	// Unsynthesizable repeat loop because repeat expression is not constant
+-rules W701	// Included file is not used
+-rules badimplicitSM1	// Unsynthesizable modelling style for a sequential machine. Clock and reset cannot be inferred
+-rules badimplicitSM2	// Unsynthesizable implicit state machine: states can only be updated on same clock phase
+-rules badimplicitSM4	// Unsynthesizable implicit state machine: event control expression may not have more than one edge
+-rules bothedges	// Using both edges of same variable in sensitivity list may be unsynthesizable
+-rules infiniteloop	// While/forever loop has no break control
+-rules mixedsenselist	// Mixed conditions in sensitivity list may not be synthesizable
+-rules STARC-2.3.1.2c	// Nested function call used inside a function may be unsynthesizable in some tools
+-rules nonstaticloop	// Unsynthesizable FOR loop
+#obsolete#-rules readclock	// Unsynthesizable implicit state machine: clock read inside always block
+-rules repeatevent	// Repeat event control may not be synthesizable
+#obsolete#-rules taskloop	// Unsynthesizable forever loop used inside function/task
+-rules FloatingInputs
+-rules FlopClockUndriven
+-rules FlopDataUndriven
+-rules LatchEnableUndriven
+-rules LatchDataUndriven

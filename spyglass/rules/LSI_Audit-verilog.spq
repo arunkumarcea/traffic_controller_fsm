@@ -1,0 +1,119 @@
+// To be used with products released by Atrenta only
+// 
+// Template Version : LSI-1.0 (SpyGlass version: 3.9.0)
+// 
+// Audit-verilog
+// 
+// ------------------------------------------------------------------------------------------------
+
+
+=template+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Audit
+*
+Checks the design for obvious issues and generates reports on design structure
+*
+The Audit step has mainly following functions:
+
+ 1. Checks whether the design, as presented to SpyGlass, is
+syntactically clean and also does checks like not including required files or 
+libraries, top-level macro/parameter/generic definitions, incorrect search paths,
+and so on.
+ 2. Summary information about the RTL data in Audit report.
+ 3. Summary information about the detailed design structure in Audit report.
+ The Audit report about the RTL data has the following sections:
+    * Basic Design Data Section
+    * Top-Level Design Units Section
+    * Black Boxes Section
+    * Grey Boxes Section
+    * Unsynthesizable Design Units Section
+    * Parameters/Generics Section
+    * Macros Section (For Verilog only)
+    * Library Section (For VHDL Only)
+    * Line-size Section
+    * Design Hierarchy Section
+    * Statistics by Design Unit Section
+ The Audit report about the design structure has the following sections:
+    * Basic Design Data Section
+    * Design Size Statistics Section
+    * Control Signals Section (Automatic Clocks and Resets identification)
+    * Design Elements Statistics Section
+    * Design Hierarchy Section
+=cut++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-verilog
+-policies=Audits,area,clock-reset,openmore
+-report Audit
+
+//Defining Severity
+-define_severity area+Audit_Info+INFO
+-define_severity Audits+Audit_Info+INFO
+-define_severity clock-reset+Audit_Info+INFO
+-define_severity openmore+Audit_Info+INFO
+
+// DESCRIPTION: Gathers stats for design. Do not select this rule directly
+-rules Audit2ID 
+-overloadrules=Audit2ID+severity=Audit_Info
+
+// DESCRIPTION: Evaluates the number of input  output and inout ports in a module
+-rules Audit2Stats 
+-overloadrules=Audit2Stats+severity=Audit_Info
+
+// Verilog DESCRIPTION: Evaluates number of instances in a module on rtl level.
+// VHDL DESCRIPTION: Evaluates number of instances in a module on rtl level
+-rules Audit2Stats2 
+-overloadrules=Audit2Stats2+severity=Audit_Info
+
+// Verilog DESCRIPTION: Dumps the parameters  macros and files included in a design file 
+// VHDL DESCRIPTION: Dumps the generic used per entity.
+// -rules Audit2Stats4 
+// -overloadrules=Audit2Stats4+severity=Audit_Info
+
+// Verilog DESCRIPTION: Dumps the data regarding line of codes  lines of comment  per module
+// VHDL DESCRIPTION: Dumps the data regarding line of codes  lines of comment  per architecture.
+-rules Audit2Stats5 
+-overloadrules=Audit2Stats5+severity=Audit_Info
+
+// DESCRIPTION: Dumps the data regarding line of codes  lines of comment  for entire design
+-rules Audit2Stats6 
+-overloadrules=Audit2Stats6+severity=Audit_Info
+
+// VHDL DESCRIPTION: Gives the libraries that are declared but not used in the design unit
+//-rules Audit2Stats7a 
+//-overloadrules=Audit2Stats7a+severity=Audit_Info
+
+// VHDL DESCRIPTION: Gives all the libraries declared for entity and architecture. 
+//-rules Audit2Stats7b 
+//-overloadrules=Audit2Stats7b+severity=Audit_Info
+
+// DESCRIPTION: Evaluates the number of times each blackbox is instantiated.
+-rules Audit2Stats8 
+-overloadrules=Audit2Stats8+severity=Audit_Info
+
+// DESCRIPTION: Evaluates the number of Flip-flops  latches and tristates in a moduleThis is done on flat level netlist
+-rules Audit4Count 
+-overloadrules=Audit4Count+severity=Audit_Info
+
+// DESCRIPTION: Dumps the information regarding number of flip-flops  latches and tristates(evaluated in rule Audit4count) on stdout.
+-rules Audit4Dump 
+-overloadrules=Audit4Dump+severity=Audit_Info
+
+// DESCRIPTION: Gathers stats for design. Do not select this rule directly
+-rules Audit4ID 
+-overloadrules=Audit4ID+severity=Audit_Info
+
+// DESCRIPTION: Reports likely clock signals
+-rules Clock_info01 
+-overloadrules=Clock_info01+severity=Audit_Info
+
+// DESCRIPTION: Report the number of gates in each module and in the design
+-rules GateCount 
+-overloadrules=GateCount+severity=Audit_Info
+
+// DESCRIPTION: Gated/generated clocks are generated from more than one block in the design
+-rules GatedClock 
+-overloadrules=GatedClock+severity=Audit_Info
+
+// DESCRIPTION: Reports likely asynchronous preset and clear signals
+-rules Reset_info01 
+-overloadrules=Reset_info01+severity=Audit_Info
+

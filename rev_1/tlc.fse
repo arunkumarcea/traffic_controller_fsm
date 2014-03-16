@@ -1,0 +1,40 @@
+
+fsm_encoding {6560561} sequential
+
+fsm_state_encoding {6560561} STOP_ALL {00000}
+
+fsm_state_encoding {6560561} SOUTH_TO_ALL {00001}
+
+fsm_state_encoding {6560561} SOUTH_TO_ALL_YLW {00010}
+
+fsm_state_encoding {6560561} STOS_ALLTOLEFT {00011}
+
+fsm_state_encoding {6560561} STOS_ALLTOLEFT_YLW {00100}
+
+fsm_state_encoding {6560561} WEST_TO_ALL {00101}
+
+fsm_state_encoding {6560561} WEST_TO_ALL_YLW {00110}
+
+fsm_state_encoding {6560561} WTOW_ALLTOLEFT {00111}
+
+fsm_state_encoding {6560561} WTOW_ALLTOLEFT_YLW {01000}
+
+fsm_state_encoding {6560561} NORTH_TO_ALL {01001}
+
+fsm_state_encoding {6560561} NORTH_TO_ALL_YLW {01010}
+
+fsm_state_encoding {6560561} NTON_ALLTOLEFT {01011}
+
+fsm_state_encoding {6560561} NTON_ALLTOLEFT_YLW {01100}
+
+fsm_state_encoding {6560561} EAST_TO_ALL {01101}
+
+fsm_state_encoding {6560561} EAST_TO_ALL_YLW {01110}
+
+fsm_state_encoding {6560561} ETOE_ALLTOLEFT {01111}
+
+fsm_state_encoding {6560561} ETOE_ALLTOLEFT_YLW {10000}
+
+fsm_state_encoding {6560561} PEDESTRIAN {10001}
+
+fsm_registers {6560561} {reg_prsnt_st[4]}  {reg_prsnt_st[3]}  {reg_prsnt_st[2]}  {reg_prsnt_st[1]}  {reg_prsnt_st[0]} 

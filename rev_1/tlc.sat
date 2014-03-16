@@ -1,0 +1,78 @@
+# Run with quartus_sh -t <x_cons.tcl>
+
+# Global assignments 
+define_design_name {tlc}
+define_synthesis -family FLEX6000
+define_synthesis -device {EPF6016TC144-2}
+define_synthesis -style WYSIWYG
+define_synthesis -inverter_push_back OFF
+clear_auto_cliques
+define_synthesis -timing_constraint ON
+define_clock {} -freq 1.0
+
+# Clock assignments 
+
+define_clock {|clk} -period 8.075
+
+define_output_delay {|south_lights_gyr0} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr1} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr2} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr3} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr4} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr5} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr6} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr7} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr8} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr9} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr10} 0.1 -clock {|clk}
+define_output_delay {|south_lights_gyr11} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr0} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr1} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr2} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr3} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr4} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr5} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr6} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr7} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr8} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr9} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr10} 0.1 -clock {|clk}
+define_output_delay {|north_lights_gyr11} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr0} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr1} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr2} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr3} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr4} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr5} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr6} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr7} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr8} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr9} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr10} 0.1 -clock {|clk}
+define_output_delay {|west_lights_gyr11} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr0} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr1} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr2} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr3} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr4} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr5} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr6} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr7} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr8} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr9} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr10} 0.1 -clock {|clk}
+define_output_delay {|east_lights_gyr11} 0.1 -clock {|clk}
+define_input_delay {|clk} 0.1
+define_input_delay {|reset} 0.1
+if {[file exists ___quartus_options.tcl]} {
+	source ___quartus_options.tcl
+}
+
+
+# Incremental Compilation
+    # this will synchronize any existing partitions declared in Synpilfy
+    # with partitions existing in Quartus. If partitions exist,
+    # incremental compilation will be enabled
+    variable compile_point_list
+    set compile_point_list [list]
+    source "/tools/synp-2011.03-sp1/lib/altera/qic.tcl"

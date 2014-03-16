@@ -1,0 +1,23 @@
+#
+# Synplicity Verification Interface File
+# Generated using Synplify-pro
+#
+# Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+# All rights reserved
+#
+
+# Set logfile options
+vif_set_result_file  tlc.vlf
+
+# Set technology for TCL script
+vif_set_technology -architecture FPGA -vendor Altera
+
+# RTL and technology files
+vif_add_library -original $env(QUARTUS_ROOTDIR)/eda/fv_lib/verilog
+vif_add_file -original -verilog ../tlc.v
+vif_set_top_module -original -top tlc
+ 
+vif_add_library -translated $env(QUARTUS_ROOTDIR)/eda/fv_lib/verilog
+vif_add_file -translated -verilog tlc.vqm
+vif_set_top_module -translated -top tlc 

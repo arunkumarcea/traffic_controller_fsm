@@ -1,0 +1,85 @@
+
+GLOBAL_PROJECT_SYNTHESIS_ASSIGNMENT_OPTIONS
+BEGIN
+	DEVICE_FAMILY = FLEX6000;
+	STYLE = WYSIWYG;
+END;
+
+CHIP tlc
+BEGIN
+	DEVICE = EPF6016TC144-2;
+END;
+
+DEFINE_LOGIC_SYNTHESIS_STYLE WYSIWYG.FLEX8000
+BEGIN
+	NOT_GATE_PUSH_BACK = OFF;
+END;
+
+IGNORED_ASSIGNMENTS
+BEGIN
+	FIT_IGNORE_TIMING = OFF;
+END;
+
+TIMING_POINT
+BEGIN
+	FREQUENCY = 1.0MHz;
+	|clk :	FREQUENCY = 123.8MHz;
+	|south_lights_gyr0 :	TCO = 7.975ns;
+	|south_lights_gyr1 :	TCO = 7.975ns;
+	|south_lights_gyr2 :	TCO = 7.975ns;
+	|south_lights_gyr3 :	TCO = 7.975ns;
+	|south_lights_gyr4 :	TCO = 7.975ns;
+	|south_lights_gyr5 :	TCO = 7.975ns;
+	|south_lights_gyr6 :	TCO = 7.975ns;
+	|south_lights_gyr7 :	TCO = 7.975ns;
+	|south_lights_gyr8 :	TCO = 7.975ns;
+	|south_lights_gyr9 :	TCO = 7.975ns;
+	|south_lights_gyr10 :	TCO = 7.975ns;
+	|south_lights_gyr11 :	TCO = 7.975ns;
+	|north_lights_gyr0 :	TCO = 7.975ns;
+	|north_lights_gyr1 :	TCO = 7.975ns;
+	|north_lights_gyr2 :	TCO = 7.975ns;
+	|north_lights_gyr3 :	TCO = 7.975ns;
+	|north_lights_gyr4 :	TCO = 7.975ns;
+	|north_lights_gyr5 :	TCO = 7.975ns;
+	|north_lights_gyr6 :	TCO = 7.975ns;
+	|north_lights_gyr7 :	TCO = 7.975ns;
+	|north_lights_gyr8 :	TCO = 7.975ns;
+	|north_lights_gyr9 :	TCO = 7.975ns;
+	|north_lights_gyr10 :	TCO = 7.975ns;
+	|north_lights_gyr11 :	TCO = 7.975ns;
+	|west_lights_gyr0 :	TCO = 7.975ns;
+	|west_lights_gyr1 :	TCO = 7.975ns;
+	|west_lights_gyr2 :	TCO = 7.975ns;
+	|west_lights_gyr3 :	TCO = 7.975ns;
+	|west_lights_gyr4 :	TCO = 7.975ns;
+	|west_lights_gyr5 :	TCO = 7.975ns;
+	|west_lights_gyr6 :	TCO = 7.975ns;
+	|west_lights_gyr7 :	TCO = 7.975ns;
+	|west_lights_gyr8 :	TCO = 7.975ns;
+	|west_lights_gyr9 :	TCO = 7.975ns;
+	|west_lights_gyr10 :	TCO = 7.975ns;
+	|west_lights_gyr11 :	TCO = 7.975ns;
+	|east_lights_gyr0 :	TCO = 7.975ns;
+	|east_lights_gyr1 :	TCO = 7.975ns;
+	|east_lights_gyr2 :	TCO = 7.975ns;
+	|east_lights_gyr3 :	TCO = 7.975ns;
+	|east_lights_gyr4 :	TCO = 7.975ns;
+	|east_lights_gyr5 :	TCO = 7.975ns;
+	|east_lights_gyr6 :	TCO = 7.975ns;
+	|east_lights_gyr7 :	TCO = 7.975ns;
+	|east_lights_gyr8 :	TCO = 7.975ns;
+	|east_lights_gyr9 :	TCO = 7.975ns;
+	|east_lights_gyr10 :	TCO = 7.975ns;
+	|east_lights_gyr11 :	TCO = 7.975ns;
+	|clk :	TSU = 999.9ns;
+	|reset :	TSU = 999.9ns;
+END;
+
+COMPILER_INTERFACES_CONFIGURATION
+BEGIN
+	EDIF_INPUT_GND = GND;
+	EDIF_INPUT_VCC = VCC;
+	EDIF_INPUT_LMF1 = synplcty.lmf;
+	EDIF_INPUT_USE_LMF1 = ON;
+END;

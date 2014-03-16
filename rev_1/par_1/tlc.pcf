@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Thu Oct 24 10:35:17 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+TIMEGRP clk = BEL "reg_prsnt_st[10]" BEL "reg_prsnt_st[11]" BEL
+        "reg_prsnt_st[12]" BEL "reg_prsnt_st[13]" BEL "reg_prsnt_st[14]" BEL
+        "reg_prsnt_st[15]" BEL "reg_prsnt_st[16]" BEL "reg_prsnt_st[17]" BEL
+        "reg_prsnt_st[3]" BEL "reg_prsnt_st[4]" BEL "reg_prsnt_st[5]" BEL
+        "reg_prsnt_st[6]" BEL "reg_prsnt_st[7]" BEL "reg_prsnt_st[8]" BEL
+        "reg_prsnt_st[9]" BEL "reg_prsnt_st[0]" BEL "reg_prsnt_st[1]" BEL
+        "reg_prsnt_st[2]" BEL "clk_ibuf" BEL "count_fast[3]" BEL "count[3]"
+        BEL "count[2]" BEL "count[1]" BEL "count[0]";
+TS_clk = PERIOD TIMEGRP "clk" 1.824 ns HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,395 @@
+Synopsys Altera Technology Mapper, Version maprc, Build 514R, Built May 20 2011 15:53:55
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03-SP1
+@N: MF249 |Running in 64-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: MT206 |Autoconstrain Mode is ON
+
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+
+@N:"/home/arkuma/probation/traffic_controller/tlc.v":43:0:43:5|Found counter in view:work.tlc(verilog) inst count[3:0]
+Encoding state machine work.tlc(verilog)-reg_prsnt_st[17:0]
+original code -> new code
+   00000 -> 000000000000000000
+   00001 -> 000000000000000011
+   00010 -> 000000000000000101
+   00011 -> 000000000000001001
+   00100 -> 000000000000010001
+   00101 -> 000000000000100001
+   00110 -> 000000000001000001
+   00111 -> 000000000010000001
+   01000 -> 000000000100000001
+   01001 -> 000000001000000001
+   01010 -> 000000010000000001
+   01011 -> 000000100000000001
+   01100 -> 000001000000000001
+   01101 -> 000010000000000001
+   01110 -> 000100000000000001
+   01111 -> 001000000000000001
+   10000 -> 010000000000000001
+   10001 -> 100000000000000001
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 107MB)
+
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 107MB)
+
+
+Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 107MB)
+
+
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 109MB)
+
+
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 109MB)
+
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 109MB)
+
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 109MB)
+
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 109MB)
+
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 109MB)
+
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 109MB)
+
+
+Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 109MB)
+
+
+Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 109MB)
+
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 109MB)
+
+
+Finished restoring hierarchy (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 110MB)
+
+
+Writing Analyst data base /home/arkuma/probation/traffic_controller/rev_1/tlc.srm
+
+Finished Writing Netlist Databases (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 110MB)
+
+Writing EDIF Netlist and constraint files
+Enabling timing driven placement for new ACF file.
+
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:01s; Memory used current: 106MB peak: 110MB)
+
+@W: MT420 |Found inferred clock tlc|clk with period 8.08ns. A user-defined clock should be declared on object "p:clk"
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Tue Oct 22 11:24:58 2013
+#
+
+
+Top view:               tlc
+Requested Frequency:    123.8 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: -1.425
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group                
+------------------------------------------------------------------------------------------------------------------------
+tlc|clk            123.8 MHz     105.3 MHz     8.075         9.500         -1.425     inferred     Autoconstr_clkgroup_0
+========================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------
+Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------
+tlc|clk   tlc|clk  |  8.075       -1.425  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+
+====================================
+Detailed Report for Clock: tlc|clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                     Starting                                                  Arrival           
+Instance             Reference     Type        Pin     Net                     Time        Slack 
+                     Clock                                                                       
+-------------------------------------------------------------------------------------------------
+reg_prsnt_st[4]      tlc|clk       S_DFF_N     Q       south_lights_gyr[4]     0.200       -1.425
+reg_prsnt_st[5]      tlc|clk       S_DFF_N     Q       reg_prsnt_st[5]         0.200       -1.425
+reg_prsnt_st[6]      tlc|clk       S_DFF_N     Q       west_lights_gyr[6]      0.200       -1.425
+reg_prsnt_st[7]      tlc|clk       S_DFF_N     Q       reg_prsnt_st[7]         0.200       -1.425
+count[0]             tlc|clk       S_DFF_N     Q       count[0]                0.200       -1.025
+count[1]             tlc|clk       S_DFF_N     Q       count[1]                0.200       -1.025
+count[2]             tlc|clk       S_DFF_N     Q       count[2]                0.200       -1.025
+count[3]             tlc|clk       S_DFF_N     Q       count[3]                0.200       -1.025
+reg_prsnt_st[2]      tlc|clk       S_DFF_N     Q       south_lights_gyr[6]     0.200       -0.925
+reg_prsnt_st[10]     tlc|clk       S_DFF_N     Q       north_lights_gyr[6]     0.200       -0.925
+=================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                     Starting                                                       Required           
+Instance             Reference     Type        Pin     Net                          Time         Slack 
+                     Clock                                                                             
+-------------------------------------------------------------------------------------------------------
+reg_prsnt_st[1]      tlc|clk       S_DFF_N     D       reg_prsnt_st_srsts_0[1]      6.175        -1.425
+count[1]             tlc|clk       S_DFF_N     D       count_n1                     6.175        -1.025
+count[2]             tlc|clk       S_DFF_N     D       count_n2                     6.175        -1.025
+count[3]             tlc|clk       S_DFF_N     D       count_n3                     6.175        -1.025
+reg_prsnt_st[2]      tlc|clk       S_DFF_N     D       reg_prsnt_st_srsts_i[2]      6.175        -0.425
+reg_prsnt_st[6]      tlc|clk       S_DFF_N     D       reg_prsnt_st_srsts_i[6]      6.175        -0.425
+reg_prsnt_st[10]     tlc|clk       S_DFF_N     D       reg_prsnt_st_srsts_i[10]     6.175        -0.425
+reg_prsnt_st[14]     tlc|clk       S_DFF_N     D       reg_prsnt_st_srsts_i[14]     6.175        -0.425
+reg_prsnt_st[16]     tlc|clk       S_DFF_N     D       reg_prsnt_st_srsts_i[16]     6.175        -0.425
+count[0]             tlc|clk       S_DFF_N     D       count_n0_m5_i                6.175        -0.125
+=======================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      8.075
+    - Setup time:                            1.900
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.175
+
+    - Propagation time:                      7.600
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.425
+
+    Number of logic level(s):                3
+    Starting point:                          reg_prsnt_st[4] / Q
+    Ending point:                            reg_prsnt_st[1] / D
+    The start point is clocked by            tlc|clk [rising] on pin CLK
+    The end   point is clocked by            tlc|clk [rising] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                               Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+reg_prsnt_st[4]                    S_DFF_N     Q        Out     0.200     0.200       -         
+south_lights_gyr[4]                Net         -        -       -         -           8         
+green_i_a2[8]                      S_LUT       I2       In      0.000     0.200       -         
+green_i_a2[8]                      S_LUT       OUT      Out     3.200     3.400       -         
+west_lights_gyr[8]                 Net         -        -       -         -           4         
+reg_prsnt_st_srsts_0_a3_0_2[1]     S_CAS       I2       In      0.000     3.400       -         
+reg_prsnt_st_srsts_0_a3_0_2[1]     S_CAS       OUT      Out     2.300     5.700       -         
+reg_prsnt_st_srsts_0_a3_0_2[1]     Net         -        -       -         -           1         
+reg_prsnt_st_srsts_0[1]            S_LUT       I2       In      0.000     5.700       -         
+reg_prsnt_st_srsts_0[1]            S_LUT       OUT      Out     1.900     7.600       -         
+reg_prsnt_st_srsts_0[1]            Net         -        -       -         -           1         
+reg_prsnt_st[1]                    S_DFF_N     D        In      0.000     7.600       -         
+================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      8.075
+    - Setup time:                            1.900
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.175
+
+    - Propagation time:                      7.600
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.425
+
+    Number of logic level(s):                3
+    Starting point:                          reg_prsnt_st[5] / Q
+    Ending point:                            reg_prsnt_st[1] / D
+    The start point is clocked by            tlc|clk [rising] on pin CLK
+    The end   point is clocked by            tlc|clk [rising] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                               Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+reg_prsnt_st[5]                    S_DFF_N     Q        Out     0.200     0.200       -         
+reg_prsnt_st[5]                    Net         -        -       -         -           7         
+green_i_a2[8]                      S_LUT       I3       In      0.000     0.200       -         
+green_i_a2[8]                      S_LUT       OUT      Out     3.200     3.400       -         
+west_lights_gyr[8]                 Net         -        -       -         -           4         
+reg_prsnt_st_srsts_0_a3_0_2[1]     S_CAS       I2       In      0.000     3.400       -         
+reg_prsnt_st_srsts_0_a3_0_2[1]     S_CAS       OUT      Out     2.300     5.700       -         
+reg_prsnt_st_srsts_0_a3_0_2[1]     Net         -        -       -         -           1         
+reg_prsnt_st_srsts_0[1]            S_LUT       I2       In      0.000     5.700       -         
+reg_prsnt_st_srsts_0[1]            S_LUT       OUT      Out     1.900     7.600       -         
+reg_prsnt_st_srsts_0[1]            Net         -        -       -         -           1         
+reg_prsnt_st[1]                    S_DFF_N     D        In      0.000     7.600       -         
+================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      8.075
+    - Setup time:                            1.900
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.175
+
+    - Propagation time:                      7.600
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.425
+
+    Number of logic level(s):                3
+    Starting point:                          reg_prsnt_st[6] / Q
+    Ending point:                            reg_prsnt_st[1] / D
+    The start point is clocked by            tlc|clk [rising] on pin CLK
+    The end   point is clocked by            tlc|clk [rising] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                               Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+reg_prsnt_st[6]                    S_DFF_N     Q        Out     0.200     0.200       -         
+west_lights_gyr[6]                 Net         -        -       -         -           10        
+green_i_a2[8]                      S_LUT       I1       In      0.000     0.200       -         
+green_i_a2[8]                      S_LUT       OUT      Out     3.200     3.400       -         
+west_lights_gyr[8]                 Net         -        -       -         -           4         
+reg_prsnt_st_srsts_0_a3_0_2[1]     S_CAS       I2       In      0.000     3.400       -         
+reg_prsnt_st_srsts_0_a3_0_2[1]     S_CAS       OUT      Out     2.300     5.700       -         
+reg_prsnt_st_srsts_0_a3_0_2[1]     Net         -        -       -         -           1         
+reg_prsnt_st_srsts_0[1]            S_LUT       I2       In      0.000     5.700       -         
+reg_prsnt_st_srsts_0[1]            S_LUT       OUT      Out     1.900     7.600       -         
+reg_prsnt_st_srsts_0[1]            Net         -        -       -         -           1         
+reg_prsnt_st[1]                    S_DFF_N     D        In      0.000     7.600       -         
+================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      8.075
+    - Setup time:                            1.900
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.175
+
+    - Propagation time:                      7.600
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.425
+
+    Number of logic level(s):                3
+    Starting point:                          reg_prsnt_st[7] / Q
+    Ending point:                            reg_prsnt_st[1] / D
+    The start point is clocked by            tlc|clk [rising] on pin CLK
+    The end   point is clocked by            tlc|clk [rising] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                               Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+reg_prsnt_st[7]                    S_DFF_N     Q        Out     0.200     0.200       -         
+reg_prsnt_st[7]                    Net         -        -       -         -           6         
+green_i_a2[8]                      S_LUT       I0       In      0.000     0.200       -         
+green_i_a2[8]                      S_LUT       OUT      Out     3.200     3.400       -         
+west_lights_gyr[8]                 Net         -        -       -         -           4         
+reg_prsnt_st_srsts_0_a3_0_2[1]     S_CAS       I2       In      0.000     3.400       -         
+reg_prsnt_st_srsts_0_a3_0_2[1]     S_CAS       OUT      Out     2.300     5.700       -         
+reg_prsnt_st_srsts_0_a3_0_2[1]     Net         -        -       -         -           1         
+reg_prsnt_st_srsts_0[1]            S_LUT       I2       In      0.000     5.700       -         
+reg_prsnt_st_srsts_0[1]            S_LUT       OUT      Out     1.900     7.600       -         
+reg_prsnt_st_srsts_0[1]            Net         -        -       -         -           1         
+reg_prsnt_st[1]                    S_DFF_N     D        In      0.000     7.600       -         
+================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      8.075
+    - Setup time:                            1.900
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         6.175
+
+    - Propagation time:                      7.200
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.025
+
+    Number of logic level(s):                4
+    Starting point:                          count[0] / Q
+    Ending point:                            count[2] / D
+    The start point is clocked by            tlc|clk [rising] on pin CLK
+    The end   point is clocked by            tlc|clk [rising] on pin CLK
+
+Instance / Net                                 Pin       Pin               Arrival     No. of    
+Name                               Type        Name      Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------
+count[0]                           S_DFF_N     Q         Out     0.200     0.200       -         
+count[0]                           Net         -         -       -         -           20        
+reg_prsnt_st_srsts_i_o2[15]        S_LUT       I1        In      0.000     0.200       -         
+reg_prsnt_st_srsts_i_o2[15]        S_LUT       OUT       Out     2.300     2.500       -         
+reg_prsnt_st_srsts_i_o2_lc[15]     Net         -         -       -         -           1         
+reg_prsnt_st_srsts_i_o2_lc[15]     LCELL       A_IN      In      0.000     2.500       -         
+reg_prsnt_st_srsts_i_o2_lc[15]     LCELL       A_OUT     Out     1.900     4.400       -         
+reg_prsnt_st_srsts_i_o2[15]        Net         -         -       -         -           7         
+count_n2_sub                       S_CAS       I1        In      0.000     4.400       -         
+count_n2_sub                       S_CAS       OUT       Out     2.300     6.700       -         
+count_n2_sub                       Net         -         -       -         -           1         
+count_RNO[2]                       S_CAS       CAS       In      0.000     6.700       -         
+count_RNO[2]                       S_CAS       OUT       Out     0.500     7.200       -         
+count_n2                           Net         -         -       -         -           1         
+count[2]                           S_DFF_N     D         In      0.000     7.200       -         
+=================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+##### START OF AREA REPORT #####[
+Design view:work.tlc(verilog)
+Selecting part epf6016tc144-2
+
+Total LUTs:  86 of 1320 ( 6%)
+Logic resources:  86 LCs of 1320 ( 6%)
+Number of Nets:   144
+Number of Inputs: 513
+Register bits:    22
+EABs:             0  (0% of 6)
+I/O cells:       50
+
+Details:
+Cells in logic mode:   61
+Cells in arith mode:   0
+Cells in cascade mode: 25
+Cells in counter mode: 0
+##### END OF AREA REPORT #####]
+
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Oct 22 11:24:58 2013
+
+###########################################################]

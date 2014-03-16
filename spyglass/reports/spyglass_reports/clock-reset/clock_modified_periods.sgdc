@@ -1,0 +1,3 @@
+
+current_design "tlc"
+clock -name tlc.clk -period 10.00 -domain clk_domain

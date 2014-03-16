@@ -1,0 +1,57 @@
+#x HLBEGIN S.1
+#x {{COLOR=>1;}{TEXT=>F:9;COLOR=>1;}}
+#x !{-2 0 0}
+#x 59 { @@i 604 a 0 @@p 0 a 0 @@p 0 a 1 @@t0 0 604 2 @@p0 1 0 }
+#x HLEND
+#x HLBEGIN S.2
+#x {}
+#x 59 { @@i 596 }
+#x HLEND
+#x HLBEGIN S.3
+#x {}
+#x 59 { @@i 597 }
+#x HLEND
+#x HLBEGIN S.4
+#x {}
+#x 59 { @@i 598 }
+#x HLEND
+#x HLBEGIN S.5
+#x {}
+#x 59 { @@i 599 }
+#x HLEND
+#x HLBEGIN S.6
+#x {}
+#x 59 { @@i 600 }
+#x HLEND
+#x HLBEGIN S.7
+#x {}
+#x 59 { @@i 601 }
+#x HLEND
+#x HLBEGIN S.8
+#x {}
+#x 59 { @@i 602 }
+#x HLEND
+#x HLBEGIN S.9
+#x {}
+#x 59 { @@i 603 }
+#x HLEND
+#x HLBEGIN S.10
+#x {}
+#x 59 { @@i 604 }
+#x HLEND
+#x HLBEGIN S.11
+#x {{COLOR=>1;}}
+#x 59 { @@i 596 a 0 @@p 0 a 0 @@s 0 t 596 2 p 0 a 0 }
+#x HLEND
+#x HLBEGIN S.12
+#x {{COLOR=>1;}}
+#x 59 { @@i 6 a 0 @@t 596 1 a 0 @@p 1 a 0 @@s 1 p 1 t 6 1 a 0
+#x @@s 135 t 6 0 t 596 1 a 0 }
+#x HLEND
+#x HLBEGIN S.13
+#x {{COLOR=>3;}{COLOR=>3;TEXT=>x;}}
+#x 59 { @@i 596 a 0 @@i 597 a 0 @@i 598 a 0 @@i 599 a 0 @@i 600 a 0 @@i 601 a 0
+#x @@i 602 a 0 @@i 603 a 0 @@i 604 a 0 @@t 596 0 a 1 @@t 597 0 a 1 @@t 598 0 a 1
+#x @@t 599 0 a 1 @@t 600 0 a 1 @@t 601 0 a 1 @@t 602 0 a 1 @@t 603 0 a 1
+#x @@t 604 0 a 1 }
+#x HLEND

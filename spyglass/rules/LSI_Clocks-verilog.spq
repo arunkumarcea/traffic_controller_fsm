@@ -1,0 +1,73 @@
+// To be used with products released by Atrenta only
+// 
+// Template Version : LSI-1.0  (SpyGlass version: 3.9.0)
+// 
+// Clocks-verilog
+// 
+// -------------------------------------------------------------
+
+
+=template+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Clocks
+*
+Checks the design for few basic Clocks and Resets issues
+*
+This template is an important must-check collection of clocks and resets
+related issues in the design. Other clocks and reset related checks can
+be found in policies like clock-reset, starc, lint, morelint and openmore.
+=cut++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-verilog
+-policies=timing,clock-reset
+
+//Defining Severity
+-define_severity clock-reset+Clocks_Issue+WARNING
+-define_severity timing+Clocks_Issue+WARNING
+
+// DESCRIPTION: Reports a race condition between the clock and enable signal of a flop
+-rules ClockEnableRace 
+-overloadrules=ClockEnableRace+severity=Clocks_Issue
+
+// DESCRIPTION: Flags clocks that are gated without latching their enable signal properly
+-rules Clock_glitch02 
+-overloadrules=Clock_glitch02+severity=Clocks_Issue
+
+// DESCRIPTION: Flags a clock signal that passes through a MUX and re-converges back on the same MUX
+-rules Clock_glitch03 
+-overloadrules=Clock_glitch03+severity=Clocks_Issue
+
+// DESCRIPTION: Flags outputs of flip-flops that are converging on a flip-flop clock pin through combinational logic
+-rules Clock_glitch04 
+-overloadrules=Clock_glitch04+severity=Clocks_Issue
+
+// DESCRIPTION: Reports signals generated from different synchronizers in the same domain which are converging
+-rules Clock_sync03a 
+-overloadrules=Clock_sync03a+severity=Clocks_Issue
+
+// DESCRIPTION: Reports signals generated from synchronizers in different domains which are converging.
+-rules Clock_sync03b 
+-overloadrules=Clock_sync03b+severity=Clocks_Issue
+
+// DESCRIPTION: Reports primary inputs sampled by multiple clock domains
+-rules Clock_sync05 
+-overloadrules=Clock_sync05+severity=Clocks_Issue
+
+// DESCRIPTION: Reports signals synchronized more than once in the same clock domain
+-rules Clock_sync09 
+-overloadrules=Clock_sync09+severity=Clocks_Issue
+
+// DESCRIPTION: Flags latches  tristate signals  or XOR/XNOR gates found in a reset tree
+// -rules Reset_check02 
+// -overloadrules=Reset_check02+severity=Clocks_Issue
+
+// DESCRIPTION: Reports asynchronous reset signals which are not de-asserted synchronously
+-rules Reset_sync01 
+-overloadrules=Reset_sync01+severity=Clocks_Issue
+
+// DESCRIPTION: Reports asynchronous reset signals which are generated in asynchronous clock domain
+-rules Reset_sync02 
+-overloadrules=Reset_sync02+severity=Clocks_Issue
+
+// DESCRIPTION: Reports unsychronized clock domain crossing
+-rules Clock_sync01
+-overloadrules=Clock_sync01+severity=Clocks_Issue
+

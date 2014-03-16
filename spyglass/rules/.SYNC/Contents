@@ -1,0 +1,11 @@
+2
+keyed
+<Name><State><Vault><Branch><Version><DateFetched><Log><Conflict><StickyTag><MergedFrom>
+<DTI_DFT-verilog.spq><F><sync://punesync01:45604/Projects/SPS-IP/OTP-SSS/int/spyglass/rules/DTI_DFT-verilog.spq;><1.1.5><1.1><1333109866><><F><><><vctime=1299487602>
+<Signoff-verilog.spq><F><sync://punesync01:45604/Projects/SPS-IP/OTP-SSS/int/spyglass/rules/Signoff-verilog.spq;><1.1.5><1.1><1333109866><><F><><><vctime=1299487602>
+<LSI_Audit-verilog.spq><F><sync://punesync01:45604/Projects/SPS-IP/OTP-SSS/int/spyglass/rules/LSI_Audit-verilog.spq;><1.1.5><1.1><1333109866><><F><><><vctime=1299487602>
+<LSI_Clocks-verilog.spq><F><sync://punesync01:45604/Projects/SPS-IP/OTP-SSS/int/spyglass/rules/LSI_Clocks-verilog.spq;><1.1.5><1.1><1333109866><><F><><><vctime=1299487601>
+<DTI_Synth-verilog.spq><F><sync://punesync01:45604/Projects/SPS-IP/OTP-SSS/int/spyglass/rules/DTI_Synth-verilog.spq;><1.1.5><1.1><1333109866><><F><><><vctime=1299487602>
+<LSI_Structure-verilog.spq><F><sync://punesync01:45604/Projects/SPS-IP/OTP-SSS/int/spyglass/rules/LSI_Structure-verilog.spq;><1.1.5><1.1><1333109866><><F><><><vctime=1299487602>
+
+

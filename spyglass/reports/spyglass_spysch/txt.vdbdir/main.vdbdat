@@ -1,0 +1,46 @@
+#x TXT_BEGIN T.1
+#x TXT_BEGIN T.2
+
+################################################################################
+
+Section A: Clocks in the design
+===============================
+
+(Clock Name)             ;  (Clock-ID)
+--------------------------------------
+tlc.clk                  ;  1
+
+################################################################################
+
+Section B: Resets in the design
+===============================
+
+(Reset Name)             ;  (Reset-ID)
+--------------------------------------
+tlc.reset                ;  1
+
+################################################################################
+
+Section C: Uninitialized Registers (after primary sets/resets are applied)
+==========================================================================
+
+(Register Name)                                 ; (File Name)              ; (Line No.)
+---------------------------------------------------------------------------------------
+tlc.count[3:0]                                  ; /home/arkuma/probation/traffic_controller/tlc.v; 50 
+tlc.reg_prsnt_st[4:0]                           ; /home/arkuma/probation/traffic_controller/tlc.v; 61 
+
+################################################################################
+
+Section D: Register Information
+===============================
+
+(Register Name)                                 ; (Initial value)     ;  (Clock ID) ; (Reset ID) ; (File Name) ; (Line No.)
+------------------------------------------------------------------------------------------------------------------------
+tlc.count[3:0]                                  ; XXXX                ; (1) ; (1) ; /home/arkuma/probation/traffic_controller/tlc.v ; 50 
+tlc.reg_prsnt_st[4:0]                           ; XXXXX               ; (1) ; (1) ; /home/arkuma/probation/traffic_controller/tlc.v ; 61 
+
+################################################################################
+#x TXT_END T.2
+#x TXT_BEGIN T.3
+#x TXT_END T.3
+#x TXT_BEGIN T.4

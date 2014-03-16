@@ -1,0 +1,2 @@
+SCHEMA@@CName@@CMode@@CFrequency@@CDomain@@DCrossings@@RegPEdge@@LatchPEdge@@LibCellPEdge@@BBPEdge@@RegNEdge@@LatchNEdge@@LibCellNEdge@@BBNEdge@@CSource
+VALUE@@tlc.clk@@sys-clock@@-@@clk_domain@@0@@9@@0@@0@@0@@0@@0@@0@@0@@SDC/SGDC

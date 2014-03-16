@@ -1,0 +1,10 @@
+##Header_Start
+##Spyglass_Version:5.0.0
+##Header_End
+
+##File_ID::1
+
+##File_Name::../constraints/tlc.sgdc@@Design_Unit::tlc
+##Line_no::26@@port@@tlc.clk
+##Line_no::31@@port@@tlc.reset
+

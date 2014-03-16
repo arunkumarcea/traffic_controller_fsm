@@ -1,0 +1,38 @@
+---------------------------------------
+Resource Usage Report for tlc 
+
+Mapping to part: xc5vlx20tff323-1
+Cell usage:
+FDR             6 uses
+FDRE            3 uses
+GND             1 use
+VCC             1 use
+LUT2            5 uses
+LUT3            8 uses
+LUT4            17 uses
+LUT5            12 uses
+LUT6            7 uses
+
+I/O ports: 50
+I/O primitives: 50
+IBUF           1 use
+IBUFG          1 use
+OBUF           48 uses
+
+BUFG           1 use
+
+I/O Register bits:                  0
+Register bits not including I/Os:   9 (0%)
+
+Global Clock Buffers: 1 of 32 (3%)
+
+
+Mapping Summary:
+Total  LUTs: 31 (0%)
+
+Distribution of All Consumed LUTs = LUT2 + LUT3 + LUT4 + LUT5 + LUT6- HLUTNM/2 
+Distribution of All Consumed Luts 31 = 5 + 8 + 17 + 12 + 7- 36/2 
+
+
+ Number of unique control sets:              2
+

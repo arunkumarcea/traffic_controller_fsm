@@ -1,0 +1,18 @@
+@P:  Worst Slack : -0.336
+@P:  tlc|clk - Estimated Frequency : 494.1 MHz
+@P:  tlc|clk - Requested Frequency : 592.4 MHz
+@P:  tlc|clk - Estimated Period : 2.024
+@P:  tlc|clk - Requested Period : 1.688
+@P:  tlc|clk - Slack : -0.336
+@P:  Worst Slack(min analysis) : 0.949
+@P:  tlc|clk - Estimated Frequency(min analysis) : 494.1 MHz
+@P:  tlc|clk - Requested Frequency(min analysis) : 592.4 MHz
+@P:  tlc|clk - Estimated Period(min analysis) : 2.024
+@P:  tlc|clk - Requested Period(min analysis) : 1.688
+@P:  tlc|clk - Slack(min analysis) : -0.336
+@P: tlc Part : xc5vlx20tff323-1
+@P: tlc I/O primitives : 50
+@P: tlc I/O Register bits : 0
+@P: tlc Register bits (Non I/O) : 9 (0%)
+@P: tlc Total Luts : 31 (0%)
+@P:  CPU Time : 0h:00m:01s

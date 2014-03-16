@@ -1,0 +1,24 @@
+Selecting top level module tlc
+@N: CG364 :"/home/arkuma/probation/traffic_controller/tlc.v":1:7:1:9|Synthesizing module tlc
+
+@N: CL201 :"/home/arkuma/probation/traffic_controller/tlc.v":56:0:56:5|Trying to extract state machine for register reg_prsnt_st
+Extracted state machine for register reg_prsnt_st
+State machine has 18 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01100
+   01101
+   01110
+   01111
+   10000
+   10001

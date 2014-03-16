@@ -1,0 +1,32 @@
+-verilog
+-policies=clock-reset
+
+
+// - - - - - - - - - - - - The Rule List starts here - - - - - - - - - - - - 
+-rules Clock_sync01  // Reports unsynchronized crossings
+-overloadrules=Clock_sync01+severity=Error
+
+-rules Clock_sync02  // Reports synchronized crossings
+-overloadrules=Clock_sync02+severity=Info
+
+-rules Clock_sync05  // Reports primary inputs sampled by multiple clock domains
+-overloadrules=Clock_sync05+severity=Error
+
+-rules Clock_sync06  // Reports primary outputs driven by multiple clock domain flipflops or latches
+-overloadrules=Clock_sync06+severity=Error
+
+-rules Clock_sync09  // Signals at clock domain crossings that are synchronized at more than one place
+-overloadrules=Clock_sync09+severity=Error
+
+-rules Reset_sync01  // Asynchronous reset signals that are not de-asserted synchronously with the corresponding clock signal
+-overloadrules=Reset_sync01+severity=Error
+
+-rules Reset_sync02  // Asynchronous resets used in a clock domain and generated in one of its asynchronous clock domains
+-overloadrules=Reset_sync02+severity=Error
+
+-rules Ac_conv01  // Same-domain signals that are synchronized with multi-flop and sync-cell synchronizers to another domain and that are converging after any number of sequential elements
+-overloadrules=Ac_conv01+severity=Error
+
+-rules Ac_conv02  // Same-domain signals that are synchronized with multi-flop and sync-cell synchronizers to another domain and that are converging before encountering a sequential element
+-overloadrules=Ac_conv02+severity=Error
+

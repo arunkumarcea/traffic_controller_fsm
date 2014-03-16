@@ -1,0 +1,258 @@
+Release 14.2 Map P.28xd (lin64)
+Xilinx Mapping Report File for Design 'tlc'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vlx20t-ff323-1 -w -logic_opt off -ol
+high -t 1 -register_duplication off -global_opt off -mt off -cm area -detail -ir
+off -pr off -lc off -power off -o tlc_map.ncd tlc.ngd tlc.pcf 
+Target Device  : xc5vlx20t
+Target Package : ff323
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Thu Oct 24 10:34:53 2013
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                    23 out of  12,480    1%
+    Number used as Flip Flops:                  23
+  Number of Slice LUTs:                         56 out of  12,480    1%
+    Number used as logic:                       56 out of  12,480    1%
+      Number using O6 output only:              44
+      Number using O5 and O6:                   12
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    26 out of   3,120    1%
+  Number of LUT Flip Flop pairs used:           56
+    Number with an unused Flip Flop:            33 out of      56   58%
+    Number with an unused LUT:                   0 out of      56    0%
+    Number of fully used LUT-FF pairs:          23 out of      56   41%
+    Number of unique control sets:               2
+    Number of slice register sites lost
+      to control set restrictions:               5 out of  12,480    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        50 out of     172   29%
+
+Specific Feature Utilization:
+  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
+    Number used as BUFGs:                        1
+
+Average Fanout of Non-Clock Nets:                4.80
+
+Peak Memory Usage:  878 MB
+Total REAL time to MAP completion:  25 secs 
+Total CPU time to MAP completion:   13 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  32 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Redundant Block(s):
+TYPE 		BLOCK
+LOCALBUF 		reg_prsnt_st_srsts_0_RNO[1]/LUT5_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[2]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[14]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO_0[2]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[10]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[6]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[16]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO_0[6]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO_0[14]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO_0[10]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO_0[16]/LUT6_L_BUF
+LOCALBUF 		count_RNO[2]/LUT6_L_BUF
+LOCALBUF 		count_3_i_0_o2_x_1[0]/LUT4_L_BUF
+LOCALBUF 		count_RNO[0]/LUT6_L_BUF
+LOCALBUF 		count_3_i_0_o2_x_0[0]/LUT4_L_BUF
+LOCALBUF 		count_RNO[1]/LUT6_L_BUF
+LOCALBUF 		count_3_i_0_o2_x[0]/LUT4_L_BUF
+LOCALBUF 		count_fast_RNO[3]/LUT4_L_BUF
+LOCALBUF 		count_RNO[3]/LUT4_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[12]/LUT5_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[13]/LUT5_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[4]/LUT5_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[5]/LUT5_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[8]/LUT5_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[9]/LUT5_L_BUF
+LOCALBUF 		reg_prsnt_st_srsts_0[1]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[11]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[15]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[7]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[17]/LUT6_L_BUF
+LOCALBUF 		reg_prsnt_st_RNO[3]/LUT6_L_BUF
+INV 		reset_ibuf_RNI8255
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| east_lights_gyr[0]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[1]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[2]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[3]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[4]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[5]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[6]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[7]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[8]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[9]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[10]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| east_lights_gyr[11]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[0]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[1]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[2]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[3]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[4]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[5]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[6]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[7]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[8]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[9]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[10]               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| north_lights_gyr[11]               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| reset                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| south_lights_gyr[0]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[1]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[2]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[3]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[4]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[5]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[6]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[7]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[8]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[9]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[10]               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| south_lights_gyr[11]               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[0]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[1]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[2]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[3]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[4]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[5]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[6]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[7]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[8]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[9]                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[10]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| west_lights_gyr[11]                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+
+Section 12 - Control Set Information
+------------------------------------
++----------------------------------------------------------------------------------------------+
+| Clock Signal | Reset Signal | Set Signal | Enable Signal | Slice Load Count | Bel Load Count |
++----------------------------------------------------------------------------------------------+
+| clk_c        |              |            |               | 7                | 18             |
+| clk_c        | reset_c_i    |            |               | 3                | 5              |
++----------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48E  | BUFG  | BUFIO | BUFR  | DCM_ADV   | PLL_ADV   | Full Hierarchical  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| tlc/               |           | 26/26         | 23/23         | 56/56         | 0/0           | 0/0       | 0/0     | 1/1   | 0/0   | 0/0   | 0/0       | 0/0       | tlc                |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

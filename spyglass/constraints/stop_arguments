@@ -1,0 +1,45 @@
+###############################################################################
+##
+## FILE:        $Id: stop_arguments.rca 1.1.5.1 Wed Aug 29 11:53:51 2012 sakulkar Experimental $
+##
+## DESCRIPTION: Input to Atrenta Spyglass.  This lists all files where the
+##              tool should stop checking the RTL, such as for behavorial
+##              models.
+##
+###############################################################################
+##
+##  This media contains an authorized copy or copies of material
+##  copyrighted by LSI Corporation.  This copyright notice and any
+##  other copyright notices included in machine readable copies must
+##  be reproduced on all authorized copies.  This is confidential and
+##  unpublished property of LSI Corporation.
+##
+##  Copyright (C) LSI Corporation, 2009.
+##  All rights reserved.
+##
+###############################################################################
+
+# RX Buffer used in the HIL RxDP
+# Tx Buffer used in the HIL TxDP
+#-stopfile /home/arkuma/probation/fifo/mem.v
+#-stopfile ${OTP_RELEASE_PATH}/prod/mem/TEF28HP128X8HD18_PHRM_C091221.v
+#-stopfile ${OTP_RELEASE_PATH}/int/rtl/verilog/efuse/altera_mf.v
+
+
+###############################################################################
+# UDPs - files
+# Note: UDPs are User Defined Primitives, which are behavorial models
+#       used in library cells.
+#stopdir doesn't work, stopfile does work
+
+# Clock-gating cell and UDP used in the qb_fifo clock gating module
+# I think this should be handled a different way . . .  celldefine??
+#-stopfile /tools/fip40.1/lsi40nm_1.0-current/tsmc_cln40g/shared/verilog/udps/LSI_udp_tlat.v
+#-stopfile /tools/fip40.1/lsi40nm_1.0-current/tsmc_cln40g/schxd/verilog/functional/CLKSGLNX4HXD.v
+###############################################################################
+# MISC
+#-stopdir ../models/io_models
+
+#sewkits
+#-stop sewkit1_module
+

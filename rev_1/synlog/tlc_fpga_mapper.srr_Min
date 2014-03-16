@@ -1,0 +1,171 @@
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Thu Oct 24 10:37:21 2013
+#
+
+
+Top view:               tlc
+Requested Frequency:    592.4 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    /home/arkuma/probation/traffic_controller/rev_1/tlc_fsm.sdc
+                       
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 0.949
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group                
+------------------------------------------------------------------------------------------------------------------------
+tlc|clk            592.4 MHz     494.1 MHz     1.688         2.024         -0.336     inferred     Autoconstr_clkgroup_0
+========================================================================================================================
+
+
+
+Clock Relationships
+*******************
+
+Clocks             |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------
+Starting  Ending   |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------
+tlc|clk   tlc|clk  |  0.000       0.949  |  No paths    -      |  No paths    -      |  No paths    -    
+=========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: tlc|clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                    Starting                                           Arrival          
+Instance            Reference     Type     Pin     Net                 Time        Slack
+                    Clock                                                               
+----------------------------------------------------------------------------------------
+count[3]            tlc|clk       FDR      Q       count[3]            3.212       1.178
+count[0]            tlc|clk       FDR      Q       count[0]            3.212       1.217
+count[1]            tlc|clk       FDR      Q       count[1]            3.212       1.217
+count[2]            tlc|clk       FDR      Q       count[2]            3.212       1.217
+reg_prsnt_st[4]     tlc|clk       FDR      Q       reg_prsnt_st[4]     3.212       1.413
+reg_prsnt_st[0]     tlc|clk       FDRE     Q       reg_prsnt_st[0]     3.212       1.479
+reg_prsnt_st[1]     tlc|clk       FDR      Q       reg_prsnt_st[1]     3.212       1.479
+reg_prsnt_st[3]     tlc|clk       FDRE     Q       reg_prsnt_st[3]     3.212       1.566
+reg_prsnt_st[2]     tlc|clk       FDRE     Q       reg_prsnt_st[2]     3.212       1.566
+========================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                    Starting                                              Required          
+Instance            Reference     Type     Pin     Net                    Time         Slack
+                    Clock                                                                   
+--------------------------------------------------------------------------------------------
+reg_prsnt_st[0]     tlc|clk       FDRE     CE      count_i[3]             3.057        0.949
+reg_prsnt_st[2]     tlc|clk       FDRE     CE      count_i[3]             3.057        0.949
+reg_prsnt_st[3]     tlc|clk       FDRE     CE      count_i[3]             3.057        0.949
+count[3]            tlc|clk       FDR      D       N_81_i_i               2.837        1.016
+reg_prsnt_st[1]     tlc|clk       FDR      D       reg_prsnt_st_0[1]      2.837        1.147
+count[0]            tlc|clk       FDR      D       count_3[0]             2.837        1.213
+count[1]            tlc|clk       FDR      D       N_242_i                2.837        1.213
+count[2]            tlc|clk       FDR      D       count_3[2]             2.837        1.213
+reg_prsnt_st[0]     tlc|clk       FDRE     D       reg_prsnt_st_ns[0]     2.837        1.255
+reg_prsnt_st[2]     tlc|clk       FDRE     D       N_299_i                2.837        1.255
+============================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.956
+    + Clock delay at starting point:         2.897
+    - Requested Period:                      0.000
+    - Hold time:                             -0.059
+    - Clock delay at ending point:           2.897
+    = Slack (non-critical) :                 1.016
+
+    Number of logic level(s):                1
+    Starting point:                          count[3] / Q
+    Ending point:                            count[3] / D
+    The start point is clocked by            tlc|clk [rising] on pin C
+    The end   point is clocked by            tlc|clk [rising] on pin C
+
+Instance / Net                Pin      Pin               Arrival     No. of    
+Name               Type       Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------
+count[3]           FDR        Q        Out     0.315     3.212       -         
+count[3]           Net        -        -       0.378     -           6         
+count_RNO[3]       LUT4_L     I0       In      -         3.590       -         
+count_RNO[3]       LUT4_L     LO       Out     0.263     3.853       -         
+N_81_i_i           Net        -        -       0.000     -           1         
+count[3]           FDR        D        In      -         3.853       -         
+===============================================================================
+
+
+Start clock path (MIN):
+
+Instance / Net                 Pin      Pin               Arrival     No. of    
+Name               Type        Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------
+Start Clock :      tlc|clk                                                      
+------------                                                                    
+clk                Port        clk      In      -         0.000       -         
+clk                Net         -        -       0.000     -           1         
+clk_ibuf_iso       IBUFG       I        In      -         0.000       -         
+clk_ibuf_iso       IBUFG       O        Out     0.694     0.694       -         
+clk_ibuf_iso       Net         -        -       0.913     -           1         
+clk_ibuf           BUFG        I        In      -         1.607       -         
+clk_ibuf           BUFG        O        Out     0.204     1.812       -         
+clk_c              Net         -        -       1.085     -           9         
+count[3]           FDR         C        In      -         2.897       -         
+================================================================================
+
+
+End clock path (MIN):
+
+Instance / Net                 Pin      Pin               Arrival     No. of    
+Name               Type        Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------
+Start Clock :      tlc|clk                                                      
+------------                                                                    
+clk                Port        clk      In      -         0.000       -         
+clk                Net         -        -       0.000     -           1         
+clk_ibuf_iso       IBUFG       I        In      -         0.000       -         
+clk_ibuf_iso       IBUFG       O        Out     0.694     0.694       -         
+clk_ibuf_iso       Net         -        -       0.913     -           1         
+clk_ibuf           BUFG        I        In      -         1.607       -         
+clk_ibuf           BUFG        O        Out     0.204     1.812       -         
+clk_c              Net         -        -       1.085     -           9         
+count[3]           FDR         C        In      -         2.897       -         
+================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+

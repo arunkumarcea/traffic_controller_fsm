@@ -1,0 +1,14 @@
+Synopsys Altera Technology Pre-mapping, Version maprc, Build 514R, Built May 20 2011 15:53:55
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03-SP1
+@N: MF249 |Running in 64-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+
+@N: BN225 |Writing default property annotation file /home/arkuma/probation/traffic_controller/rev_1/tlc.sap.
+Pre Mapping successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Oct 22 11:24:56 2013
+
+###########################################################]

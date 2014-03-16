@@ -1,0 +1,215 @@
+// To be used with products released by Atrenta only
+//
+// Template Version : LSI-1.0 (SpyGlass version: 3.9.0)
+//
+// Structure-verilog
+// 
+// -------------------------------------------------------------
+
+=template+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Structure
+*
+Checks the design for recommended design practices and Structural issues
+*
+This template is an important must-check collection of design structure
+related issues in the design. Other design structure related checks can be found in policies like lint, morelint, latch, starc, openmore,starc2002, clock-reset, timing and erc.
+=cut++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-verilog
+-policies=openmore,starc2002,erc,lint,latch,starc,morelint,timing,dft,constraints,miscellaneous
+
+//Defining Severity
+-define_severity miscellaneous+Structure_Issue+WARNING
+-define_severity constraints+Structure_Issue+WARNING
+-define_severity dft+Structure_Issue+WARNING
+-define_severity erc+Structure_Issue+WARNING
+-define_severity latch+Structure_Issue+WARNING
+//-define_severity lint+Structure_Issue+WARNING
+-define_severity morelint+Structure_Issue+WARNING
+-define_severity openmore+Structure_Issue+WARNING
+//-define_severity starc+Structure_Issue+WARNING
+-define_severity starc2002+Structure_Issue+WARNING
+-define_severity timing+Structure_Issue+WARNING
+-define_severity erc+Connectivity_Issue+WARNING
+-define_severity openmore+Connectivity_Issue+WARNING
+-define_severity starc+Connectivity_Issue+WARNING
+
+// DESCRIPTION: Bus signals are declared with low-order bit first
+-rules ArrayIndex
+-overloadrules=ArrayIndex+severity=Connectivity_Issue
+
+// Verilog DESCRIPTION: Bit-width of the component port and its connected net must match
+-rules STARC-3.2.3.2
+-overloadrules=STARC-3.2.3.2+severity=Connectivity_Issue
+
+// Verilog DESCRIPTION: An instance port connection has incompatible width compared to the port definition
+// -rules W110
+// -overloadrules=W110+severity=Connectivity_Issue
+
+// DESCRIPTION: LHS width is less than RHS width of assignment (Truncation)
+// -rules W164a
+// -overloadrules=W164a+severity=Connectivity_Issue
+
+// DESCRIPTION: LHS width is greater than RHS width of assignment (Extension)
+// -rules W164b
+// -overloadrules=W164b+severity=Connectivity_Issue
+
+// Verilog DESCRIPTION: Assignment to a supply net
+// -rules W317
+// -overloadrules=W317+severity=Connectivity_Issue
+
+// DESCRIPTION: IO-ports or Output ports of cells/modules may not be connected to supply signals
+-rules checkPinConnectedToSupply
+-overloadrules=checkPinConnectedToSupply+severity=Connectivity_Issue
+
+// DESCRIPTION: Do not use flip-flops with both asynchronous set AND reset.
+-rules Async_04
+-overloadrules=Async_04+severity=Structure_Issue
+
+// DESCRIPTION: Do not use both edges of a clock to drive latches
+// -rules ClockEdges
+// -overloadrules=ClockEdges+severity=Structure_Issue
+
+// DESCRIPTION: Combinational loop exists
+-rules CombLoop
+-overloadrules=CombLoop+severity=Structure_Issue
+
+// DESCRIPTION: Deep mux detected - potential performance problem
+-rules DeepMux -bigmux_max=8
+-overloadrules=DeepMux+severity=Structure_Issue
+
+// DESCRIPTION: The ConstSig rule flags nets that have a constant value or registers that can only switch to a constant value.
+-rules ConstSig
+-strict_constsig=1
+-overloadrules=ConstSig+severity=Structure_Issue
+
+// DESCRIPTION: The DeadCode rule flags nets that are either not driven or do not drive anything and instances that do not contribute to the overall functionality of the design.
+-rules DeadCode
+-overloadrules=DeadCode+severity=Structure_Issue
+
+// DESCRIPTION: And/Nand gate is disabled
+//-rules DisabledAnd
+//-overloadrules=DisabledAnd+severity=Structure_Issue
+//
+// DESCRIPTION: Or/Nor gate is disabled
+//-rules DisabledOr
+//-overloadrules=DisabledOr+severity=Structure_Issue
+//
+// Verilog DESCRIPTION: Design should not use casex constructs
+// -rules DisallowCaseX-ML
+// -overloadrules=DisallowCaseX-ML+severity=Structure_Issue
+
+// Verilog DESCRIPTION: Design should not use casez constructs
+// -rules DisallowCaseZ-ML 
+// -overloadrules=DisallowCaseZ-ML+severity=Structure_Issue
+
+// Verilog DESCRIPTION: "casez statement should not use ""x"" "
+// -rules DisallowXInCaseZ-ML
+// -overloadrules=DisallowXInCaseZ-ML+severity=Structure_Issue
+
+// Verilog DESCRIPTION: "A case choice is covered more than once in a case statement when ""parallel_case"" pragma is specified"
+-rules DuplicateCaseLabel-ML
+-overloadrules=DuplicateCaseLabel-ML+severity=Structure_Issue
+
+// DESCRIPTION: Flip-flop clock pin driven by a constant value
+-rules FlopClockConstant
+-overloadrules=FlopClockConstant+severity=Structure_Issue
+
+// DESCRIPTION: Flip-flop data pin driven by a constant value
+// -rules FlopDataConstant
+// -overloadrules=FlopDataConstant+severity=Structure_Issue
+
+// DESCRIPTION: Flip-flop enable pin is permanently disabled
+-rules FlopEConst
+-overloadrules=FlopEConst+severity=Structure_Issue
+
+// DESCRIPTION: Flip-flop set or reset pin is permanently enabled
+-rules FlopSRConst
+-overloadrules=FlopSRConst+severity=Structure_Issue
+
+// DESCRIPTION: Gated/generated clocks exist in the design that are not all generated from one top-level block
+-rules GateClockAtTop
+-overloadrules=GateClockAtTop+severity=Structure_Issue
+
+// DESCRIPTION: Gated/generated resets exist in the design that are not all generated from onetop-level block
+-rules GateResetAtTop
+-overloadrules=GateResetAtTop+severity=Structure_Issue
+
+// DESCRIPTION: The High_Fan03b rule flags large fanout nets.
+-rules High_Fan03b
+-overloadrules=High_Fan03b+severity=Structure_Issue
+// DESCRIPTION: Report start and end points of nets
+-rules High_Fan16
+-overloadrules=High_Fan16+severity=Structure_Issue
+-tc_start_end_max_count=3000
+-tc_start_end_point_details=yes
+
+// DESCRIPTION: Latch data pin driven by a constant value
+// -rules LatchDataConstant
+// -overloadrules=LatchDataConstant+severity=Structure_Issue
+
+// DESCRIPTION: Latch enable pin driven by a constant value
+// -rules LatchEnableConstant
+// -overloadrules=LatchEnableConstant+severity=Structure_Issue
+
+// DESCRIPTION: There should not be a combinational feedback path from a latch output to data or enable of the same latch.
+-rules LatchFeedback
+-overloadrules=LatchFeedback+severity=Structure_Issue
+
+// DESCRIPTION: LogN mux with large number of select inputs detected - potential performance problem
+-rules LogNMux -logmux_max=4
+-overloadrules=LogNMux+severity=Structure_Issue
+
+// DESCRIPTION: Logic depth exceeds specified number of levels (using parameter delaymax/delaymax_memtoflop/delaymax_floptomem/delaymax_memtomem)
+// By default, the LogicDepth rule flags paths that have more than 40 logic levels. Set the delaymax rule parameter to a positive integer number to change the default maximum limit as follows:  -delaymax=<number>.   We need to determine the appropriate number for our given technology.
+-rules LogicDepth
+-overloadrules=LogicDepth+severity=Structure_Issue
+
+// DESCRIPTION: Fanout of a net exceeds a critical threshold
+-rules MaxFanout
+-overloadrules=MaxFanout+severity=Structure_Issue
+-fanoutmax=1000
+
+// DESCRIPTION: Mux select is constant
+// -rules MuxSelConst
+// -overloadrules=MuxSelConst+severity=Structure_Issue
+
+// DESCRIPTION: Asynchronous reset signals must not be used as non-reset/synchronous signals
+// -rules STARC-1.3.1.3
+// -overloadrules=STARC-1.3.1.3+severity=Structure_Issue
+
+// Verilog DESCRIPTION: Sequential and combinational parts of an FSM description should be in separate always blocks.
+// VHDL DESCRIPTION: Sequential and combinational parts of an FSM description should be separated
+// -rules STARC-2.11.3.1
+// -overloadrules=STARC-2.11.3.1+severity=Structure_Issue
+
+// DESCRIPTION: Logic must not exist in tristate enable conditions
+// -rules STARC-2.5.1.2
+// -overloadrules=STARC-2.5.1.2+severity=Structure_Issue
+
+// DESCRIPTION: A tristate bus should not be driven by more than the specified number of drivers
+// -rules STARC-2.5.1.4 -tristate_count=5
+// -overloadrules=STARC-2.5.1.4+severity=Structure_Issue
+
+// DESCRIPTION: Do not create a RS latch using primitive cells such as AND  OR
+// -rules STARC02-1.2.1.2
+// -overloadrules=STARC02-1.2.1.2+severity=Structure_Issue
+
+// DESCRIPTION: Avoid combinational loops that contain latches
+// -rules STARC02-2.4.1.4
+// -overloadrules=STARC02-2.4.1.4+severity=Structure_Issue
+
+// DESCRIPTION: Do not use two level latches in the same phase clock
+-rules STARC02-2.4.1.5
+-overloadrules=STARC02-2.4.1.5+severity=Structure_Issue
+
+// DESCRIPTION: Tristate gate enable is constant
+// -rules TristateConst
+// -overloadrules=TristateConst+severity=Structure_Issue
+
+// DESCRIPTION: At least one output port of a cell must be connected to a net
+-rules checkOPPinConnectedToNet_a
+-overloadrules=checkOPPinConnectedToNet_a+severity=Structure_Issue
+
+// DESCRIPTION: Tristate Signals must be connected to busholder cells.
+// -rules checkTristateBuses
+// -overloadrules=checkTristateBuses+severity=Structure_Issue

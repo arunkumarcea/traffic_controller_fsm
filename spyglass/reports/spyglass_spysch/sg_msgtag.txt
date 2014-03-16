@@ -1,0 +1,104 @@
+10 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["../reports//spyglass_reports/dft/dft_data/dft_data_01.csv@@cross-probecol:3"]
+"DFT_DATA_CSV_TAG"
+1
+11 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["../reports//spyglass_reports/dft/dft_data/dft_data_02.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+2
+12 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+3
+13 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+4
+14 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+5
+15 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+6
+16 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+7
+17 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+8
+18 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+9
+19 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+10
+20 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+11
+22 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["../reports//spyglass_reports/dft/dft_data/dft_data_03.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+12
+24 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["../reports//spyglass_reports/dft/dft_data/dft_data_04.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+13
+27 "Reset_info01" 1
+"RESET_INFO_01_SS_SCH"
+1
+-1 "Ac_initstate01" 1
+"RULEGROUP"
+["clock-reset/ADV_CLOCKS"]
+-1 "CMD_overloadrule01" 2
+"RULEGROUP"
+["Command-line read"]
+"BUILTIN"
+"1"
+-1 "CaseOverIf" 1
+"RULEGROUP"
+["openmore/Coding_for_Synthesis"]
+-1 "Clock_info01" 1
+"RULEGROUP"
+["clock-reset/FIND"]
+-1 "DeepMux" 1
+"RULEGROUP"
+["timing"]
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Info_DftDebugData" 1
+"RULEGROUP"
+["dft/MustRules"]
+-1 "Propagate_Clocks" 1
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "ReportStopSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Reset_info01" 1
+"RULEGROUP"
+["clock-reset/FIND"]
+-1 "checkCMD_together01" 2
+"RULEGROUP"
+["Command-line read"]
+"BUILTIN"
+"1"
+-1 "checkCMD_unknown" 2
+"RULEGROUP"
+["Command-line read"]
+"BUILTIN"
+"1"
+-1 "dftOptional_Constraint_Check" 1
+"RULEGROUP"
+["dft/MustRules"]

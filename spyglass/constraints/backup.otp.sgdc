@@ -1,0 +1,36 @@
+###############################################################################
+# otp_module.sgdc
+# $Id: otp.sgdc.rca 1.1 Mon Mar  7 14:16:42 2011 sakulkar Experimental sakulkar $
+# Owner: OTP Team
+#
+# This file contains all Spyglass constraints other then "waive" constraints,
+# Atrenta Spyglass version 3.9.x/4.0.x.
+#
+###############################################################################
+#
+#  This media contains an authorized copy or copies of material
+#  copyrighted by LSI Corporation.  This copyright notice and
+#  any other copyright notices included in machine readable
+#  copies must be reproduced on all authorized copies.  This is
+#  confidential and unpublished property of LSI Corporation.
+#
+#  Copyright (C) LSI Corporation, 2008.
+#  All rights reserved.
+#
+###############################################################################
+
+
+current_design "otp"
+
+# DEFINE CLOCKS
+  clock -name "otp.otp_clk"  -domain "clk_otp_domain"
+  clock -name "otp.PCLK"     -domain "clk_apb_domain"
+  clock -name "otp.sif_clk"  -domain "clk_sif_domain"
+
+# DEFINE RESETS
+  reset -name "otp.otp_resetn"  -value 0
+  reset -name "otp.PRESETn"     -value 0
+  reset -name "otp.sif_en"      -value 0
+
+# Read in SDC (Synopsys) constraints for the clocks
+sdcschema -file ../constraints/otp.synth.sdc
